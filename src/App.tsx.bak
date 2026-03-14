@@ -605,9 +605,13 @@ export default function App() {
                           <span className="text-emerald-700 font-semibold">{pub.venue}</span>
                           <span>, {pub.year}. </span>
                           <a href={pub.doi ? `https://doi.org/${pub.doi}` : (pub.pdfLink || "#")} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium ml-1">[PDF]</a>
-                          <button className="text-blue-600 hover:underline font-medium ml-2 align-baseline">
-				  [Cite]
-				</button>
+                          <button 
+                            onClick={() => copyToClipboard(generateBib(pub))}
+                            className="inline-flex items-center ml-2 text-slate-500 hover:text-blue-600 transition-colors align-middle"
+                            title="Copy BibTeX"
+                          >
+                            <Quote size={14} />
+                          </button>
                           {pub.opensource && (
                             <a 
                               href={pub.codeLink || "#"} 
