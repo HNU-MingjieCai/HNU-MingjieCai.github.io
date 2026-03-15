@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Mail, Github, ExternalLink, ChevronRight, FileArchive, Quote } from 'lucide-react';
+import { Mail, Github, ExternalLink, ChevronRight, FileArchive, Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
 // Mock data for the homepage
@@ -506,6 +506,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('News');
   const [currentPage, setCurrentPage] = useState(1);
   const [showToast, setShowToast] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pubItemsPerPage = 8;
   const osItemsPerPage = 6;
 
@@ -517,6 +518,7 @@ export default function App() {
   };
 
   const generateBib = (pub: any) => {
+    if (pub.bib) return pub.bib;
     const firstAuthor = pub.authors.split(',')[0].split(' ').pop();
     const year = pub.year;
     const key = `${firstAuthor}${year}${pub.title.split(' ')[0].toLowerCase()}`;
@@ -540,7 +542,7 @@ export default function App() {
                 </div>
                 <div>
                   <span className="text-red-600 font-semibold text-sm mr-2">
-                    [{pub.date || pub.year}]  
+                    [{pub.date || pub.year}]
                   </span>
                   <span className="text-slate-800 font-medium leading-relaxed">
                     "{pub.title}"
@@ -603,15 +605,15 @@ export default function App() {
                           <span className="font-bold">{pub.authors}: </span>
                           <span className="italic">{pub.title}, </span>
                           <span className="text-emerald-700 font-semibold">{pub.venue}</span>
-                          <span>, {pub.year}. </span>
+                          <span>, {pub.date || pub.year}. </span>
                           <a href={pub.doi ? `https://doi.org/${pub.doi}` : (pub.pdfLink || "#")} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium ml-1">[PDF]</a>
                           <button 
-				  onClick={() => copyToClipboard(generateBib(pub))}
-				  className="text-blue-600 hover:underline font-medium ml-2 align-baseline"
-				  title="Copy BibTeX"
-				>
-				  [Cite]
-			</button>
+                            onClick={() => copyToClipboard(generateBib(pub))}
+                            className="text-blue-600 hover:underline font-medium ml-2 align-baseline"
+                            title="Copy BibTeX"
+                          >
+                            [Cite]
+                          </button>
                           {pub.opensource && (
                             <a 
                               href={pub.codeLink || "#"} 
@@ -749,8 +751,16 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen bg-white">
+      {/* Mobile Backdrop */}
+      {isMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-30 lg:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="fixed inset-y-0 left-0 w-80 bg-slate-900 text-white overflow-hidden z-20 hidden lg:flex flex-col">
+      <aside className={`fixed inset-y-0 left-0 w-80 bg-slate-900 text-white overflow-hidden z-40 transition-transform duration-300 transform lg:translate-x-0 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} lg:flex flex-col`}>
         {/* Sidebar Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -764,6 +774,13 @@ export default function App() {
 
         {/* Profile Section */}
         <div className="relative z-10 pt-12 pb-8 px-6 flex flex-col items-center text-center">
+          {/* Mobile Close Button */}
+          <button 
+            onClick={() => setIsMenuOpen(false)}
+            className="lg:hidden absolute top-4 right-4 p-2 text-white/50 hover:text-white transition-colors"
+          >
+            <X size={24} />
+          </button>
           <div className="w-40 h-40 rounded-full border-4 border-white/20 overflow-hidden mb-6 shadow-2xl">
             <img 
               src="https://imggrzy.hnu.edu.cn/image/f94698cd-9ad3-a644-a2b9-b82b5158c594.jpg" 
@@ -788,6 +805,7 @@ export default function App() {
               onClick={() => {
                 setActiveTab(item);
                 setCurrentPage(1);
+                setIsMenuOpen(false);
               }}
               className={`nav-link w-full text-left flex items-center justify-between ${activeTab === item ? 'active' : ''}`}
             >
@@ -813,8 +831,32 @@ export default function App() {
 
       {/* Main Content */}
       <main className="flex-1 lg:ml-80 min-h-screen">
-        {/* Header (Desktop only, top right) */}
-        <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-100 px-8 py-4 flex justify-end items-center gap-3">
+        {/* Mobile Header */}
+        <header className="lg:hidden sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 py-4 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <button 
+              onClick={() => setIsMenuOpen(true)}
+              className="p-2 -ml-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
+            >
+              <Menu size={24} />
+            </button>
+            <span className="font-bold text-slate-900 tracking-tight">Mingjie Cai</span>
+          </div>
+          <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
+            <img 
+              src="https://imggrzy.hnu.edu.cn/image/f94698cd-9ad3-a644-a2b9-b82b5158c594.jpg" 
+              alt="Mingjie Cai" 
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = "https://picsum.photos/seed/profile/100/100";
+              }}
+              referrerPolicy="no-referrer"
+            />
+          </div>
+        </header>
+
+        {/* Desktop Header (top right) */}
+        <header className="hidden lg:flex sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-100 px-8 py-4 justify-end items-center gap-3">
           <div className="text-right">
             <p className="text-sm font-semibold text-slate-700">Mingjie Cai</p>
           </div>
@@ -853,12 +895,7 @@ export default function App() {
         </footer>
       </main>
 
-      {/* Mobile Menu Button (Simplified for this demo) */}
-      <div className="lg:hidden fixed bottom-6 right-6 z-50">
-        <button className="w-14 h-14 rounded-full bg-slate-900 text-white shadow-xl flex items-center justify-center">
-          <ChevronRight size={24} className="-rotate-90" />
-        </button>
-      </div>
+      {/* Mobile Menu Button (Removed in favor of top header) */}
       {/* Toast Notification */}
       {showToast && (
         <motion.div 
