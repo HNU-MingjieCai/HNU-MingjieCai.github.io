@@ -610,7 +610,7 @@ export default function App() {
                           >
                             [Cite]
                           </button>
-                          <div className="inline-block relative group/time ml-2 align-baseline">
+                          {/* <div className="inline-block relative group/time ml-2 align-baseline">
                             <button className="text-blue-600 hover:underline font-medium cursor-help">
                               [Time]
                             </button>
@@ -631,7 +631,7 @@ export default function App() {
                               </div>
                               <div className="absolute left-4 top-full w-2.5 h-2.5 bg-slate-900 rotate-45 -translate-y-1.5" />
                             </div>
-                          </div>
+                          </div> */}
                           {pub.opensource && (
                             <a 
                               href={(pub as any).codeLink || "#"} 
@@ -725,6 +725,7 @@ export default function App() {
           <h1 className="text-2xl font-bold tracking-wider uppercase mb-1">Mingjie Cai</h1>
           <p className="text-sm font-medium text-white/70 uppercase tracking-widest">Professor</p>
           <p className="text-xs font-medium text-white/50 uppercase tracking-widest">Doctoral Supervisor</p>
+          <p className="text-xs font-medium text-white/40 uppercase tracking-widest mt-2">Hunan University, Changsha, Hunan, China</p>
         </div>
 
         {/* Navigation */}
@@ -747,14 +748,18 @@ export default function App() {
           {/* Profile Links & IDs */}
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
-              <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Homepages</p>
-              <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">Homepage (Chinese)</a>
-              <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">Homepage (English)</a>
+              <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
+                HOMEPAGE (
+                <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
+                ,{" "}
+                <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">English</a>
+                )
+              </p>
             </div>
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p>
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                ORCID <ExternalLink size={12} />
+                ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
               <p className="block">WoS: GQO-8825-2022</p>
               <p className="block">Scopus ID: 56405957700</p>
