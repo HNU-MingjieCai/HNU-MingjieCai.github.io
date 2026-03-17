@@ -296,7 +296,7 @@ const PUBLICATIONS = [
     authors: "Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",
     title: "Neighborhood margin rough set: self-tuning neighborhood threshold",
     venue: "International Journal of Approximate Reasoning",
-    year: "2024",
+    year: "2025",
     date:"2024-08-22",
     doi: "10.1016/j.ijar.2024.109271",
     volume: "174",
