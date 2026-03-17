@@ -16,7 +16,7 @@ const PUBLICATIONS = [
     year: "2026",
     date:"2026-03-06",
     doi: "10.1016/j.knosys.2026.115717",
-    opensource: true, 
+    opensource: false, 
     volume: "340",
     pages: "115717",
     onlineDate: "2026-03-06",
