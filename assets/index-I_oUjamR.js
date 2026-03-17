@@ -204,7 +204,7 @@ Error generating stack: `+i.message+`
       pages={125705},
       year={2025},
       publisher={Elsevier}
-    }`,type:"Journal"},{authors:"Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",title:"Neighborhood margin rough set: self-tuning neighborhood threshold",venue:"International Journal of Approximate Reasoning",year:"2024",date:"2024-08-22",doi:"10.1016/j.ijar.2024.109271",volume:"174",pages:"109271",onlineDate:"2024-08-22",publishDate:"2024-08-26",journalLevel:"数学类T2，CCF B类",bib:`@article{cai2024neighborhood,
+    }`,type:"Journal"},{authors:"Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",title:"Neighborhood margin rough set: self-tuning neighborhood threshold",venue:"International Journal of Approximate Reasoning",year:"2025",date:"2024-08-22",doi:"10.1016/j.ijar.2024.109271",volume:"174",pages:"109271",onlineDate:"2024-08-22",publishDate:"2024-08-26",journalLevel:"数学类T2，CCF B类",bib:`@article{cai2024neighborhood,
       title={Neighborhood margin rough set: self-tuning neighborhood threshold},
       author={Cai, Mingjie and Wang, Haichao and Xu, Feng and Li, Qingguo},
       journal={International Journal of Approximate Reasoning},
