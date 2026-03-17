@@ -223,7 +223,7 @@ const PUBLICATIONS = [
     authors: "Bin Yu, Hengjie Xie, Jingxuan Chen, Mingjie Cai*, Hamido Fujita, Weiping Ding*",
     title: "SDHGCN: A heterogeneous graph convolutional neural network combined with shadowed set",
     venue: "IEEE Transactions on Fuzzy Systems",
-    year: "2024",
+    year: "2025",
     date:"2024-11-08",
     doi:"10.1109/TFUZZ.2024.3494864",
     volume: "33",
@@ -241,6 +241,29 @@ const PUBLICATIONS = [
           year={2024},
           publisher={IEEE}
           }`,
+    type: "Journal"
+  },
+  {
+    authors: "Qiong Liu, Mingjie Cai*, Qingguo Li, Chaoqun Huang",
+    title: "Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy",
+    venue: "International Journal of Approximate Reasoning",
+    year: "2025",
+    date:"2024-11-06",
+    doi:"10.1016/j.ijar.2024.109320",
+    volume: "176",
+    pages: "109320",
+    onlineDate: "2024-11-06",
+    publishDate: "2024-11-12",
+    journalLevel: "中科院一区Top",
+    bib:`@article{liu2025multi,
+      title={Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy},
+      author={Liu, Qiong and Cai, Mingjie and Li, Qingguo and Huang, Chaoqun},
+      journal={International Journal of Approximate Reasoning},
+      volume={176},
+      pages={109320},
+      year={2025},
+      publisher={Elsevier}
+    }`,
     type: "Journal"
   },
   {
@@ -267,29 +290,7 @@ const PUBLICATIONS = [
     type: "Journal"
   },
 
-  {
-    authors: "Qiong Liu, Mingjie Cai*, Qingguo Li, Chaoqun Huang",
-    title: "Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy",
-    venue: "International Journal of Approximate Reasoning",
-    year: "2024",
-    date:"2024-11-06",
-    doi:"10.1016/j.ijar.2024.109320",
-    volume: "176",
-    pages: "109320",
-    onlineDate: "2024-11-06",
-    publishDate: "2024-11-12",
-    journalLevel: "中科院一区Top",
-    bib:`@article{liu2025multi,
-      title={Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy},
-      author={Liu, Qiong and Cai, Mingjie and Li, Qingguo and Huang, Chaoqun},
-      journal={International Journal of Approximate Reasoning},
-      volume={176},
-      pages={109320},
-      year={2025},
-      publisher={Elsevier}
-    }`,
-    type: "Journal"
-  },
+  
 
   {
     authors: "Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",
