@@ -179,7 +179,7 @@ Error generating stack: `+i.message+`
       pages={109368},
       year={2025},
       publisher={Elsevier}
-    }`,type:"Journal"},{authors:"Bin Yu, Hengjie Xie, Jingxuan Chen, Mingjie Cai*, Hamido Fujita, Weiping Ding*",title:"SDHGCN: A heterogeneous graph convolutional neural network combined with shadowed set",venue:"IEEE Transactions on Fuzzy Systems",year:"2024",date:"2024-11-08",doi:"10.1109/TFUZZ.2024.3494864",volume:"33",pages:"881-893",onlineDate:"2024-11-08",publishDate:"2025-03-03",journalLevel:"中科院一区Top，IF 11.9，人工智能B类，自动化A类",bib:`@article{yu2024sdhgcn,
+    }`,type:"Journal"},{authors:"Bin Yu, Hengjie Xie, Jingxuan Chen, Mingjie Cai*, Hamido Fujita, Weiping Ding*",title:"SDHGCN: A heterogeneous graph convolutional neural network combined with shadowed set",venue:"IEEE Transactions on Fuzzy Systems",year:"2025",date:"2024-11-08",doi:"10.1109/TFUZZ.2024.3494864",volume:"33",pages:"881-893",onlineDate:"2024-11-08",publishDate:"2025-03-03",journalLevel:"中科院一区Top，IF 11.9，人工智能B类，自动化A类",bib:`@article{yu2024sdhgcn,
           title={SDHGCN: A heterogeneous graph convolutional neural network combined with shadowed set},
           author={Yu, Bin and Xie, Hengjie and Chen, Jingxuan and Cai, Mingjie and Fujita, Hamido and Ding, Weiping},
           journal={IEEE Transactions on Fuzzy Systems},
@@ -188,20 +188,20 @@ Error generating stack: `+i.message+`
           pages={881--893},
           year={2024},
           publisher={IEEE}
-          }`,type:"Journal"},{authors:"Jiaxin Zhan, Mingjie Cai*",title:"A cost-minimized two-stage three-way dynamic consensus mechanism for social network-large scale group decision-making: utilizing k-nearest neighbors for incomplete fuzzy preference relations",venue:"Expert Systems with Applications",year:"2024",date:"2024-11-10",doi:"10.1016/j.eswa.2024.125705",volume:"263",pages:"125705",onlineDate:"2024-11-10",publishDate:"2024-11-14",journalLevel:"中科院一区Top，自动化A类",bib:`@article{zhan2025cost,
-      title={A cost-minimized two-stage three-way dynamic consensus mechanism for social network-large scale group decision-making: Utilizing K-nearest neighbors for incomplete fuzzy preference relations},
-      author={Zhan, Jiaxin and Cai, Mingjie},
-      journal={Expert Systems with Applications},
-      volume={263},
-      pages={125705},
-      year={2025},
-      publisher={Elsevier}
-    }`,type:"Journal"},{authors:"Qiong Liu, Mingjie Cai*, Qingguo Li, Chaoqun Huang",title:"Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy",venue:"International Journal of Approximate Reasoning",year:"2024",date:"2024-11-06",doi:"10.1016/j.ijar.2024.109320",volume:"176",pages:"109320",onlineDate:"2024-11-06",publishDate:"2024-11-12",journalLevel:"中科院一区Top",bib:`@article{liu2025multi,
+          }`,type:"Journal"},{authors:"Qiong Liu, Mingjie Cai*, Qingguo Li, Chaoqun Huang",title:"Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy",venue:"International Journal of Approximate Reasoning",year:"2025",date:"2024-11-06",doi:"10.1016/j.ijar.2024.109320",volume:"176",pages:"109320",onlineDate:"2024-11-06",publishDate:"2024-11-12",journalLevel:"中科院一区Top",bib:`@article{liu2025multi,
       title={Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy},
       author={Liu, Qiong and Cai, Mingjie and Li, Qingguo and Huang, Chaoqun},
       journal={International Journal of Approximate Reasoning},
       volume={176},
       pages={109320},
+      year={2025},
+      publisher={Elsevier}
+    }`,type:"Journal"},{authors:"Jiaxin Zhan, Mingjie Cai*",title:"A cost-minimized two-stage three-way dynamic consensus mechanism for social network-large scale group decision-making: utilizing k-nearest neighbors for incomplete fuzzy preference relations",venue:"Expert Systems with Applications",year:"2024",date:"2024-11-10",doi:"10.1016/j.eswa.2024.125705",volume:"263",pages:"125705",onlineDate:"2024-11-10",publishDate:"2024-11-14",journalLevel:"中科院一区Top，自动化A类",bib:`@article{zhan2025cost,
+      title={A cost-minimized two-stage three-way dynamic consensus mechanism for social network-large scale group decision-making: Utilizing K-nearest neighbors for incomplete fuzzy preference relations},
+      author={Zhan, Jiaxin and Cai, Mingjie},
+      journal={Expert Systems with Applications},
+      volume={263},
+      pages={125705},
       year={2025},
       publisher={Elsevier}
     }`,type:"Journal"},{authors:"Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",title:"Neighborhood margin rough set: self-tuning neighborhood threshold",venue:"International Journal of Approximate Reasoning",year:"2024",date:"2024-08-22",doi:"10.1016/j.ijar.2024.109271",volume:"174",pages:"109271",onlineDate:"2024-08-22",publishDate:"2024-08-26",journalLevel:"数学类T2，CCF B类",bib:`@article{cai2024neighborhood,
