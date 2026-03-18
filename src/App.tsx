@@ -11,12 +11,12 @@ import { motion } from 'motion/react';
 const PUBLICATIONS = [
   {
     authors: "Mingjie Cai, Chutian Zhou, Chaoqun Huang*, Jiaxin Zhan, Hamido Fujita",
-    title: "Elastic Agents in Cooperative Feature Selection through Multi-Agent Reinforcement Learning",
+    title: "Elastic agents in cooperative feature selection through multi-agent reinforcement learning",
     venue: "Knowledge-Based Systems",
     year: "2026",
     date:"2026-03-06",
     doi: "10.1016/j.knosys.2026.115717",
-    opensource: false, 
+    opensource: true, 
     volume: "340",
     pages: "115717",
     onlineDate: "2026-03-06",
@@ -32,6 +32,31 @@ const PUBLICATIONS = [
         url = {https://www.sciencedirect.com/science/article/pii/S0950705126004570},
         author = {Mingjie Cai and Chutian Zhou and Chaoqun Huang and Jiaxin Zhan and Hamido Fujita},
         }`,
+    type: "Journal"
+  },
+  {
+    authors: "Jiangyuan Wang, Qiong Liu*, Mingjie Cai*, Weiping Ding",
+    title: "Neural connected kernel based multiple kernel clustering, Information Fusion",
+    venue: "Knowledge-Based Systems",
+    year: "2026",
+    date:"2026-01",
+    doi: "10.1016/j.knosys.2026.115717",
+    opensource: true, 
+    volume: "125",
+    pages: "103460",
+    journalLevel: "中科院一区Top，人工智能B类",
+    bib:`@article{WANG2026103460,
+          title = {Neural Connected Kernel based Multiple Kernel Clustering},
+          journal = {Information Fusion},
+          volume = {125},
+          pages = {103460},
+          year = {2026},
+          issn = {1566-2535},
+          doi = {https://doi.org/10.1016/j.inffus.2025.103460},
+          url = {https://www.sciencedirect.com/science/article/pii/S1566253525005330},
+          author = {Jiangyuan Wang and Qiong Liu and Mingjie Cai and Weiping Ding},
+          keywords = {Multiple kernel clustering, Multi-view clustering, Localized kernel, Density peak},
+          }`,
     type: "Journal"
   },
   
@@ -223,7 +248,7 @@ const PUBLICATIONS = [
     authors: "Bin Yu, Hengjie Xie, Jingxuan Chen, Mingjie Cai*, Hamido Fujita, Weiping Ding*",
     title: "SDHGCN: A heterogeneous graph convolutional neural network combined with shadowed set",
     venue: "IEEE Transactions on Fuzzy Systems",
-    year: "2025",
+    year: "2024",
     date:"2024-11-08",
     doi:"10.1109/TFUZZ.2024.3494864",
     volume: "33",
@@ -241,29 +266,6 @@ const PUBLICATIONS = [
           year={2024},
           publisher={IEEE}
           }`,
-    type: "Journal"
-  },
-  {
-    authors: "Qiong Liu, Mingjie Cai*, Qingguo Li, Chaoqun Huang",
-    title: "Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy",
-    venue: "International Journal of Approximate Reasoning",
-    year: "2025",
-    date:"2024-11-06",
-    doi:"10.1016/j.ijar.2024.109320",
-    volume: "176",
-    pages: "109320",
-    onlineDate: "2024-11-06",
-    publishDate: "2024-11-12",
-    journalLevel: "中科院一区Top",
-    bib:`@article{liu2025multi,
-      title={Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy},
-      author={Liu, Qiong and Cai, Mingjie and Li, Qingguo and Huang, Chaoqun},
-      journal={International Journal of Approximate Reasoning},
-      volume={176},
-      pages={109320},
-      year={2025},
-      publisher={Elsevier}
-    }`,
     type: "Journal"
   },
   {
@@ -290,13 +292,35 @@ const PUBLICATIONS = [
     type: "Journal"
   },
 
-  
+  {
+    authors: "Qiong Liu, Mingjie Cai*, Qingguo Li, Chaoqun Huang",
+    title: "Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy",
+    venue: "International Journal of Approximate Reasoning",
+    year: "2024",
+    date:"2024-11-06",
+    doi:"10.1016/j.ijar.2024.109320",
+    volume: "176",
+    pages: "109320",
+    onlineDate: "2024-11-06",
+    publishDate: "2024-11-12",
+    journalLevel: "中科院一区Top",
+    bib:`@article{liu2025multi,
+      title={Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy},
+      author={Liu, Qiong and Cai, Mingjie and Li, Qingguo and Huang, Chaoqun},
+      journal={International Journal of Approximate Reasoning},
+      volume={176},
+      pages={109320},
+      year={2025},
+      publisher={Elsevier}
+    }`,
+    type: "Journal"
+  },
 
   {
     authors: "Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",
     title: "Neighborhood margin rough set: self-tuning neighborhood threshold",
     venue: "International Journal of Approximate Reasoning",
-    year: "2025",
+    year: "2024",
     date:"2024-08-22",
     doi: "10.1016/j.ijar.2024.109271",
     volume: "174",
@@ -598,7 +622,7 @@ export default function App() {
                     {sortedPubs.filter(p => p.year === year).map((pub, i) => (
                       <div key={i} className="flex gap-3 group">
                         <span className="text-slate-400 font-mono text-xs w-5 flex-shrink-0 pt-1">{i + 1}.</span>
-                        <div className="flex-1 text-[14px] leading-relaxed text-slate-800">
+                        <div className="flex-1 text-[14px] leading-relaxed text-slate-800 text-justify">
                           <span className="font-bold">{pub.authors}. </span>
                           <span>{pub.title}, </span>
                           <span className="text-emerald-700 font-semibold">{pub.venue}</span>
