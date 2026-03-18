@@ -734,7 +734,7 @@ export default function App() {
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
-                <br>HOMEPAGE</br> (
+                HOMEPAGE (
                 <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
                 ,{" "}
                 <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">English</a>
