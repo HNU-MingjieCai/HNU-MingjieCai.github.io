@@ -89,8 +89,8 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-08-07",
     doi: "10.1109/TFUZZ.2025.3596689",
-    volume: "",
-    pages: "",
+    volume: "33",
+    pages: "3529-3541",
     journalLevel: "中科院一区Top，IF 11.9，人工智能B类，自动化A类",
     bib:`@ARTICLE{11119305,
           author={Zhan, Jiaxin and Cai, Mingjie and Li, Qingguo},
@@ -734,7 +734,7 @@ export default function App() {
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
-                <p>HOMEPAGE</p>
+                <p className="text-2xl font-bold tracking-wider uppercase mb-1">HOMEPAGE</p>
                 (
                 <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
                 ,{" "}
