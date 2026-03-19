@@ -19,43 +19,26 @@ const PUBLICATIONS = [
     opensource: true, 
     volume: "340",
     pages: "115717",
-    journalLevel: "中科院一区Top，人工智能B类",
-    bib:`@article{CAI2026115717,
-        title = {Elastic Agents in Cooperative Feature Selection through Multi-Agent Reinforcement Learning},
-        journal = {Knowledge-Based Systems},
-        pages = {115717},
-        year = {2026},
-        issn = {0950-7051},
-        doi = {https://doi.org/10.1016/j.knosys.2026.115717},
-        url = {https://www.sciencedirect.com/science/article/pii/S0950705126004570},
-        author = {Mingjie Cai and Chutian Zhou and Chaoqun Huang and Jiaxin Zhan and Hamido Fujita},
-        }`,
-    type: "Journal"
+    bib:`@article{cai2026elastic,
+          title={Elastic Agents in Cooperative Feature Selection through Multi-Agent Reinforcement Learning},
+          author={Cai, Mingjie and Zhou, Chutian and Huang, Chaoqun and Zhan, Jiaxin and Fujita, Hamido},
+          journal={Knowledge-Based Systems},
+          pages={115717},
+          year={2026},
+          publisher={Elsevier}
+        }`
   },
   {
     authors: "Jiangyuan Wang, Qiong Liu*, Mingjie Cai*, Weiping Ding",
-    title: "Neural connected kernel based multiple kernel clustering, Information Fusion",
+    title: "Neural connected kernel based multiple kernel clustering",
     venue: "Information Fusion",
     year: "2026",
     date:"2026-01",
-    doi: "10.1016/j.inffus.2025.103460",
+    doi: "10.1016/j.knosys.2026.115717",
     opensource: true, 
     volume: "125",
     pages: "103460",
-    journalLevel: "中科院一区Top，人工智能B类",
-    bib:`@article{WANG2026103460,
-          title = {Neural Connected Kernel based Multiple Kernel Clustering},
-          journal = {Information Fusion},
-          volume = {125},
-          pages = {103460},
-          year = {2026},
-          issn = {1566-2535},
-          doi = {https://doi.org/10.1016/j.inffus.2025.103460},
-          url = {https://www.sciencedirect.com/science/article/pii/S1566253525005330},
-          author = {Jiangyuan Wang and Qiong Liu and Mingjie Cai and Weiping Ding},
-          keywords = {Multiple kernel clustering, Multi-view clustering, Localized kernel, Density peak},
-          }`,
-    type: "Journal"
+    bib:``
   },
   
   {
@@ -68,7 +51,6 @@ const PUBLICATIONS = [
     opensource: false, 
     volume: "33",
     pages: "4044-4054",
-    journalLevel: "中科院一区Top，IF 11.9，人工智能B类，自动化A类",
     bib:`@ARTICLE{11162561,
           author={Liu, Qiong and Cai, Mingjie and Li, Qingguo},
           journal={IEEE Transactions on Fuzzy Systems}, 
@@ -79,8 +61,7 @@ const PUBLICATIONS = [
           pages={4044-4054},
           keywords={Feature extraction;Firing;Fuzzy systems;Computational complexity;Optimization;Training;Logic gates;Dimensionality reduction;Computational modeling;Principal component analysis;Feature selection;fuzzy systems;T-norm;uncertainty measure},
           doi={10.1109/TFUZZ.2025.3608935}}
-        }`,
-    type: "Journal"
+        }`
   },
   {
     authors: "Jiaxin Zhan, Mingjie Cai*, Qingguo Li",
@@ -89,9 +70,8 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-08-07",
     doi: "10.1109/TFUZZ.2025.3596689",
-    volume: "33",
-    pages: "3529-3541",
-    journalLevel: "中科院一区Top，IF 11.9，人工智能B类，自动化A类",
+    volume: "",
+    pages: "",
     bib:`@ARTICLE{11119305,
           author={Zhan, Jiaxin and Cai, Mingjie and Li, Qingguo},
           journal={IEEE Transactions on Fuzzy Systems}, 
@@ -104,8 +84,7 @@ const PUBLICATIONS = [
           keywords={Decision making;Costs;Imputation;Accuracy;Social networking (online);Fuzzy systems;Clustering algorithms;Complexity theory;Optimization models;Training;Enhanced fuzzy c-means clustering;incomplete fuzzy preference relation;large-scale group decision-making (LSGDM);manipulative behavior;three-way decision},
           doi={10.1109/TFUZZ.2025.3596689},
           ISSN={1941-0034},
-          month={Oct},}`,
-    type: "Journal"
+          month={Oct},}`
   },
 
   {
@@ -117,7 +96,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.neucom.2025.131152",
     volume: "653",
     pages: "131152",
-    journalLevel: "Q1，中科院二区，人工智能B类，自动化A类",
     bib:`@article{GUO2025131152,
           title = {Density peaks clustering algorithm via fusing natural neighbor and fuzzy information},
           journal = {Neurocomputing},
@@ -129,8 +107,7 @@ const PUBLICATIONS = [
           url = {https://www.sciencedirect.com/science/article/pii/S0925231225018247},
           author = {Xufei Guo and Qiong Liu and Chaoqun Huang and Mingjie Cai},
           keywords = {Density-based clustering, Density peaks, Natural neighbor, Fuzzy set theory},
-          }`,
-    type: "Journal"
+          }`
   },
   {
     authors: "Baochang Ren, Mingjie Cai*, Bin Yu*",
@@ -141,7 +118,6 @@ const PUBLICATIONS = [
     doi:"10.1016/j.asoc.2025.113464",
     volume: "181",
     pages: "113464",
-    journalLevel: "Q1，中科院二区Top",
     bib:`@article{REN2025113464,
         title = {Multi-Dueling framework for multi-agent reinforcement learning},
         journal = {Applied Soft Computing},
@@ -153,8 +129,7 @@ const PUBLICATIONS = [
         url = {https://www.sciencedirect.com/science/article/pii/S1568494625007756},
         author = {Baochang Ren and Mingjie Cai and Bin Yu},
         keywords = {V-IGM principle, Multi-Dueling framework, Deep reinforcement learning, MDF},
-        }`,
-    type: "Journal"
+        }`
   },
 
     {
@@ -166,7 +141,6 @@ const PUBLICATIONS = [
     doi:"10.1016/j.fss.2025.109460",
     volume: "517",
     pages: "109460",
-    journalLevel: "中科院一区Top，数学类T2",
     bib:`@article{@article{CAI2025109460,
           title = {Prototype-based fuzzy rough sets for outlier detection},
           journal = {Fuzzy Sets and Systems},
@@ -178,8 +152,7 @@ const PUBLICATIONS = [
           url = {https://www.sciencedirect.com/science/article/pii/S016501142500199X},
           author = {Mingjie Cai and Dongying Qi and Chaoqun Huang and Jiaxin Zhan},
           keywords = {Fuzzy rough sets, Outlier detection, Prototype learning},
-          }`,
-    type: "Journal"
+          }`
   },
 
   {
@@ -191,7 +164,6 @@ const PUBLICATIONS = [
     doi:"10.1016/j.knosys.2025.113498",
     volume: "319",
     pages: "113498",
-    journalLevel: "中科院一区Top，人工智能B类",
     bib:`@article{CAI2025113498,
         title = {Anchor graph based connectivity peaks clustering},
         journal = {Knowledge-Based Systems},
@@ -203,8 +175,7 @@ const PUBLICATIONS = [
         url = {https://www.sciencedirect.com/science/article/pii/S0950705125005441},
         author = {Mingjie Cai and Jiangyuan Wang and Feng Xu and Qiong Liu and Hamido Fujita},
         keywords = {Density peaks, Density-based clustering, Density estimation, Connectivity density},
-        }`,
-    type: "Journal"
+        }`
   },
 
   {
@@ -216,7 +187,6 @@ const PUBLICATIONS = [
     doi:"10.1016/j.fss.2025.109368",
     volume: "510",
     pages: "109368",
-    journalLevel: "中科院一区Top，数学类T2",
     bib:`@article{chen2025multi,
       title={Multi-label feature selection with high-level semantic label relationships based on fuzzy rough sets},
       author={Chen, Liangzhou and Cai, Mingjie and Li, Qingguo},
@@ -225,8 +195,7 @@ const PUBLICATIONS = [
       pages={109368},
       year={2025},
       publisher={Elsevier}
-    }`,
-    type: "Journal"
+    }`
   },
   {
     authors: "Bin Yu, Hengjie Xie, Jingxuan Chen, Mingjie Cai*, Hamido Fujita, Weiping Ding*",
@@ -237,7 +206,6 @@ const PUBLICATIONS = [
     doi:"10.1109/TFUZZ.2024.3494864",
     volume: "33",
     pages: "881-893",
-    journalLevel: "中科院一区Top，IF 11.9，人工智能B类，自动化A类",
     bib:`@article{yu2024sdhgcn,
           title={SDHGCN: A heterogeneous graph convolutional neural network combined with shadowed set},
           author={Yu, Bin and Xie, Hengjie and Chen, Jingxuan and Cai, Mingjie and Fujita, Hamido and Ding, Weiping},
@@ -247,8 +215,7 @@ const PUBLICATIONS = [
           pages={881--893},
           year={2024},
           publisher={IEEE}
-          }`,
-    type: "Journal"
+          }`
   },
   {
     authors: "Jiaxin Zhan, Mingjie Cai*",
@@ -259,7 +226,6 @@ const PUBLICATIONS = [
     doi:"10.1016/j.eswa.2024.125705",
     volume: "263",
     pages: "125705",
-    journalLevel: "中科院一区Top，自动化A类",
     bib:`@article{zhan2025cost,
       title={A cost-minimized two-stage three-way dynamic consensus mechanism for social network-large scale group decision-making: Utilizing K-nearest neighbors for incomplete fuzzy preference relations},
       author={Zhan, Jiaxin and Cai, Mingjie},
@@ -268,8 +234,7 @@ const PUBLICATIONS = [
       pages={125705},
       year={2025},
       publisher={Elsevier}
-    }`,
-    type: "Journal"
+    }`
   },
 
   {
@@ -281,7 +246,6 @@ const PUBLICATIONS = [
     doi:"10.1016/j.ijar.2024.109320",
     volume: "176",
     pages: "109320",
-    journalLevel: "中科院一区Top",
     bib:`@article{liu2025multi,
       title={Multi-label feature selection based on adaptive label enhancement and class-imbalance-aware fuzzy information entropy},
       author={Liu, Qiong and Cai, Mingjie and Li, Qingguo and Huang, Chaoqun},
@@ -290,9 +254,11 @@ const PUBLICATIONS = [
       pages={109320},
       year={2025},
       publisher={Elsevier}
-    }`,
-    type: "Journal"
+    }`
   },
+
+
+
 
   {
     authors: "Mingjie Cai, Haichao Wang, Feng Xu*, Qingguo Li",
@@ -303,7 +269,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.ijar.2024.109271",
     volume: "174",
     pages: "109271",
-    journalLevel: "数学类T2，CCF B类",
     bib:`@article{cai2024neighborhood,
       title={Neighborhood margin rough set: self-tuning neighborhood threshold},
       author={Cai, Mingjie and Wang, Haichao and Xu, Feng and Li, Qingguo},
@@ -312,8 +277,7 @@ const PUBLICATIONS = [
       pages={109271},
       year={2024},
       publisher={Elsevier}
-    }`,
-    type: "Journal"
+    }`
   },
   {
     authors: "Qiong Liu, Mingjie Cai*, Qingguo Li",
@@ -324,7 +288,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.asoc.2024.112111",
     volume: "165",
     pages: "112111",
-    journalLevel: "JCR Q1",
     bib:`@article{liu2024supervised,
         title={Supervised spectral feature selection with neighborhood rough set},
         author={Liu, Qiong and Cai, Mingjie and Li, Qingguo},
@@ -333,8 +296,7 @@ const PUBLICATIONS = [
         pages={112111},
         year={2024},
         publisher={Elsevier}
-      }`,
-    type: "Journal"
+      }`
   },
   {
     authors: "Feng Xu, Mingjie Cai*, Qingguo Li, Jie Zhou, Hamido Fujita",
@@ -345,7 +307,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.asoc.2024.111779",
     volume: "161",
     pages: "111779",
-    journalLevel: "中科院一区Top",
     bib:`@article{xu2024connection,
           title={Connection density based clustering: A graph-based density clustering method},
           author={Xu, Feng and Cai, Mingjie and Li, Qingguo and Zhou, Jie and Fujita, Hamido},
@@ -354,8 +315,7 @@ const PUBLICATIONS = [
           pages={111779},
           year={2024},
           publisher={Elsevier}
-        }`,
-    type: "Journal"
+        }`
   },
   {
     authors: "Mingjie Cai, Mingzhe Yan, Zhenhua Jia*",
@@ -366,7 +326,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.fss.2024.108993",
     volume: "487",
     pages: "108993",
-    journalLevel: "中科院一区Top，数学类T2",
     bib:`@article{cai2024fuzzy,
       title={Fuzzy three-way rule learning and its classification methods},
       author={Cai, Mingjie and Yan, Mingzhe and Jia, Zhenhua},
@@ -375,8 +334,7 @@ const PUBLICATIONS = [
       pages={108993},
       year={2024},
       publisher={Elsevier}
-    }`,
-    type: "Journal"
+    }`
   },
   {
     authors: "Zhishan Wu, Mingjie Cai*, Feng Xu*, Qingguo Li",
@@ -387,7 +345,6 @@ const PUBLICATIONS = [
     doi: "10.1007/s10489-024-05368-3",
     volume: "54",
     pages: "3884-3901",
-    journalLevel: "中科院二区",
     bib:`@article{wu2024pcs,
           title={PCS-granularity weighted ensemble clustering via Co-association matrix: Z. Wu et al.},
           author={Wu, Zhishan and Cai, Mingjie and Xu, Feng and Li, Qingguo},
@@ -397,8 +354,7 @@ const PUBLICATIONS = [
           pages={3884--3901},
           year={2024},
           publisher={Springer}
-        }`,
-    type: "Journal"
+        }`
   },
   {
     authors: "Mingjie Cai, Mei Yan, Pei Wang*, Feng Xu",
@@ -409,7 +365,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.ijar.2024.109149",
     volume: "168",
     pages: "109149",
-    journalLevel: "数学类T2，CCF B类",
     bib:`@article{cai2024multi,
           title={Multi-label feature selection based on fuzzy rough sets with metric learning and label enhancement},
           author={Cai, Mingjie and Yan, Mei and Wang, Pei and Xu, Feng},
@@ -418,8 +373,7 @@ const PUBLICATIONS = [
           pages={109149},
           year={2024},
           publisher={Elsevier}
-        }`,
-    type: "Journal"
+        }`
   },
   {
     authors: "Bin Yu, Zheng Zijian, Mingjie Cai*, Witold Pedrycz, Zeshui Xu",
@@ -429,7 +383,6 @@ const PUBLICATIONS = [
     doi: "10.1109/TFUZZ.2024.3397808",
     volume: "32",
     pages: "4388-4400",
-    journalLevel: "中科院一区Top，IF 11.9，人工智能B类，自动化A类",
     bib:`@article{yu2024cbcg,
           title={CBCG: A clustering algorithm based on bidirectional conical information granularity},
           author={Yu, Bin and Zheng, Zijian and Cai, Mingjie and Pedrycz, Witold and Xu, Zeshui},
@@ -440,8 +393,7 @@ const PUBLICATIONS = [
           year={2024},
           publisher={IEEE}
         }`,
-    year: "2024",
-    type: "Journal"
+    year: "2024"
   },
 
   {
@@ -453,7 +405,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.topol.2024.108829",
     volume: "344",
     pages: "108829",
-    journalLevel: "数学类T2",
     bib:`@article{jia2024ds,
           title={DS-partial metric spaces and domain theory},
           author={Jia, Zhenhua and Cai, Mingjie and Li, Qingguo},
@@ -462,8 +413,7 @@ const PUBLICATIONS = [
           pages={108829},
           year={2024},
           publisher={Elsevier}
-        }`,
-    type: "Journal"
+        }`
   },
 
   {
@@ -475,7 +425,6 @@ const PUBLICATIONS = [
     doi: "10.1016/j.fss.2024.108860",
     volume: "480",
     pages: "108860",
-    journalLevel: "中科院一区Top，数学类T2",
     bib:`@article{yu2024frcm,
           title={FRCM: A fuzzy rough c-means clustering method},
           author={Yu, Bin and Zheng, Zijian and Cai, Mingjie and Pedrycz, Witold and Ding, Weiping},
@@ -484,8 +433,149 @@ const PUBLICATIONS = [
           pages={108860},
           year={2024},
           publisher={Elsevier}
-        }`,
-    type: "Journal"
+        }`
+  },
+  {
+    authors: "Feng Xu, Mingjie Cai*, Qingguo Li, Haichao Wang, Hamido Fujita",
+    title: "Shared neighbors rough set model and neighborhood classifiers",
+    venue: "Expert Systems with Applications",
+    year: "2024",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "244",
+    pages: "122965",
+    bib:``
+  },
+    {
+    authors: "Bin Yu, Ruihui Xu, Mingjie Cai*, Weiping Ding",
+    title: "A clustering method based on multi-positive-negative granularity and attenuation-diffusion pattern",
+    venue: "Information Fusion",
+    year: "2024",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "103",
+    pages: "102137",
+    bib:``
+  },
+    {
+    authors: "Wanting Cai, Mingjie Cai*, Qingguo Li, Qiong Liu",
+    title: "Three-way imbalanced learning based on fuzzy twin SVM",
+    venue: "Applied Soft Computing",
+    year: "2024",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "150",
+    pages: "111066",
+    bib:``
+  },
+      {
+    authors: "Mingjie Cai, Zhishan Wu, Qingguo Li, Feng Xu*, Jie Zhou",
+    title: "GFDC: A granule fusion density-based clustering with evidential reasoning",
+    venue: "International Journal of Approximate Reasoning",
+    year: "2024",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "164",
+    pages: "109075",
+    bib:``
+  },
+      {
+    authors: "Bin Yu, Hengjie Xie, Mingjie Cai*, Weiping Ding*",
+    title: "MG-GCN: Multi-granularity graph convolutional neural network for multi-label classification in multi-label information system",
+    venue: "IEEE Transactions on Emerging Topics in Computational Intelligence",
+    year: "2024",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "8",
+    pages: "288299",
+    bib:``
+  },
+
+
+
+  {
+    authors: "Zhuo Long, Mingjie Cai*, Qingguo Li, Yizhu Li, Wanting Cai",
+    title: "Convex granules and convex covering rough sets",
+    venue: "Engineering Applications of Artificial Intelligence",
+    year: "2023",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "124",
+    pages: "106509",
+    bib:``
+  },{
+    authors: "Lu Gao, Mingjie Cai*, Qingguo Li",
+    title: "A relative granular ratio-based outlier detection method in heterogeneous data",
+    venue: "Information Sciences",
+    year: "2023",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "622",
+    pages: "710-730",
+    bib:``
+  },{
+    authors: "Feng Xu, Mingjie Cai*, Huailing Song, Jianhua Dai",
+    title: "The selection of feasible strategies based on consistency measurement of cliques",
+    venue: "Information Sciences",
+    year: "2022",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "583",
+    pages: "33-35",
+    bib:``
+  },{
+    authors: "Dan Yang, Mingjie Cai*, Qingguo Li, Feng Xu",
+    title: "Multigranulation fuzzy probabilistic rough set model on two universes",
+    venue: "International Journal of Approximate Reasoning",
+    year: "2022",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "145",
+    pages: "18-35",
+    bib:``
+  },{
+    authors: "Yizhu Li, Mingjie Cai*, Jie Zhou. Qingguo Li",
+    title: "Accelerated multi-granularity reduction based on neighborhood rough sets",
+    venue: "Applied Intelligence",
+    year: "2022",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "52",
+    pages: "17636-17651",
+    bib:``
+  },{
+    authors: "Guangming Lang, Qingguo Li, Mingjie Cai*, Hamido Fujita, Hongyun Zhang",
+    title: "Related families-based methods for updating reducts under dynamic object sets",
+    venue: "Knowledge and Information Systems",
+    year: "2019",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "60",
+    pages: "1081-1104",
+    bib:``
+  },
+  {
+    authors: "Mingjie Cai, Guangming Lang*, Hamido Fujita, Zhenyu Li, Tian Yang",
+    title: "Incremental approaches to updating reducts under dynamic covering granularity",
+    venue: "Knowledge-Based Systems",
+    year: "2019",
+    date:"",
+    doi: "",
+    opensource: true, 
+    volume: "172",
+    pages: "130-140",
+    bib:``
   },
 
   
@@ -734,8 +824,7 @@ export default function App() {
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
-                <p className="text-2xl font-bold tracking-wider uppercase mb-1">HOMEPAGE</p>
-                (
+                HOMEPAGE (
                 <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
                 ,{" "}
                 <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">English</a>
@@ -743,16 +832,12 @@ export default function App() {
               </p>
             </div>
             <div className="space-y-2">
-              {/* <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher ID</p> */}
+              <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p>
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
                 ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
-              <a href="https://www.webofscience.com/wos/author/record/GQO-8825-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                WoS: GQO-8825-2022 <ExternalLink size={12} />
-              </a>
-              <a href="https://www.scopus.com/authid/detail.uri?authorId=56405957700" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                Scopus ID: 56405957700<ExternalLink size={12} />
-              </a>
+              <p className="block">WoS: GQO-8825-2022</p>
+              <p className="block">Scopus ID: 56405957700</p>
             </div>
           </div>
         </nav>
