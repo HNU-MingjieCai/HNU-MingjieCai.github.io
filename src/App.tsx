@@ -836,19 +836,8 @@ export default function App() {
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
                 ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
-<<<<<<< HEAD
               <p className="block">WoS: GQO-8825-2022</p>
               <p className="block">Scopus ID: 56405957700</p>
-=======
-              {/*
-              <a href="https://www.webofscience.com/wos/author/record/GQO-8825-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                WoS: GQO-8825-2022 <ExternalLink size={12} />
-              </a>
-              <a href="https://www.scopus.com/authid/detail.uri?authorId=56405957700" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                Scopus ID: 56405957700<ExternalLink size={12} />
-              </a>
-              */}
->>>>>>> 45a888098ea5a9a0c7a2c12b987a8ba0e47cfc2f
             </div>
           </div>
         </nav>
