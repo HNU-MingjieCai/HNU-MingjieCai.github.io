@@ -113,7 +113,7 @@ Error generating stack: `+i.message+`
           pages={4044-4054},
           keywords={Feature extraction;Firing;Fuzzy systems;Computational complexity;Optimization;Training;Logic gates;Dimensionality reduction;Computational modeling;Principal component analysis;Feature selection;fuzzy systems;T-norm;uncertainty measure},
           doi={10.1109/TFUZZ.2025.3608935}}
-        }`},{authors:"Jiaxin Zhan, Mingjie Cai*, Qingguo Li",title:"Fuzzy clustering-based three-way asynchronous consensus for identifying manipulative and herd behaviors",venue:"IEEE Transactions on Fuzzy Systems",year:"2025",date:"2025-08-07",doi:"10.1109/TFUZZ.2025.3596689",volume:"",pages:"",bib:`@ARTICLE{11119305,
+        }`},{authors:"Jiaxin Zhan, Mingjie Cai*, Qingguo Li",title:"Fuzzy clustering-based three-way asynchronous consensus for identifying manipulative and herd behaviors",venue:"IEEE Transactions on Fuzzy Systems",year:"2025",date:"2025-08-07",doi:"10.1109/TFUZZ.2025.3596689",volume:"33",pages:"3529-3541",bib:`@ARTICLE{11119305,
           author={Zhan, Jiaxin and Cai, Mingjie and Li, Qingguo},
           journal={IEEE Transactions on Fuzzy Systems}, 
           title={Fuzzy Clustering-Based Three-Way Asynchronous Consensus for Identifying Manipulative and Herd Behaviors}, 
