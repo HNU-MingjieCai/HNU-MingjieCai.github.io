@@ -16,7 +16,6 @@ const PUBLICATIONS = [
     year: "2026",
     date:"2026-03-06",
     doi: "10.1016/j.knosys.2026.115717",
-    opensource: true, 
     volume: "340",
     pages: "115717",
     bib:`@article{cai2026elastic,
@@ -35,7 +34,6 @@ const PUBLICATIONS = [
     year: "2026",
     date:"2026-01",
     doi: "10.1016/j.knosys.2026.115717",
-    opensource: true, 
     volume: "125",
     pages: "103460",
     bib:``
@@ -48,7 +46,7 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-09-12",
     doi: "10.1109/TFUZZ.2025.3608935",
-    opensource: false, 
+  
     volume: "33",
     pages: "4044-4054",
     bib:`@ARTICLE{11162561,
@@ -442,7 +440,7 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
-    opensource: true, 
+  
     volume: "244",
     pages: "122965",
     bib:``
@@ -453,8 +451,7 @@ const PUBLICATIONS = [
     venue: "Information Fusion",
     year: "2024",
     date:"",
-    doi: "",
-    opensource: true, 
+    doi: "", 
     volume: "103",
     pages: "102137",
     bib:``
@@ -466,7 +463,6 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "150",
     pages: "111066",
     bib:``
@@ -478,7 +474,6 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "164",
     pages: "109075",
     bib:``
@@ -490,7 +485,6 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "8",
     pages: "288299",
     bib:``
@@ -505,7 +499,6 @@ const PUBLICATIONS = [
     year: "2023",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "124",
     pages: "106509",
     bib:``
@@ -516,7 +509,6 @@ const PUBLICATIONS = [
     year: "2023",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "622",
     pages: "710-730",
     bib:``
@@ -527,7 +519,6 @@ const PUBLICATIONS = [
     year: "2022",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "583",
     pages: "33-35",
     bib:``
@@ -538,7 +529,6 @@ const PUBLICATIONS = [
     year: "2022",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "145",
     pages: "18-35",
     bib:``
@@ -549,7 +539,6 @@ const PUBLICATIONS = [
     year: "2022",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "52",
     pages: "17636-17651",
     bib:``
@@ -560,7 +549,6 @@ const PUBLICATIONS = [
     year: "2019",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "60",
     pages: "1081-1104",
     bib:``
@@ -572,7 +560,6 @@ const PUBLICATIONS = [
     year: "2019",
     date:"",
     doi: "",
-    opensource: true, 
     volume: "172",
     pages: "130-140",
     bib:``
