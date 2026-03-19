@@ -46,7 +46,6 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-09-12",
     doi: "10.1109/TFUZZ.2025.3608935",
-  
     volume: "33",
     pages: "4044-4054",
     bib:`@ARTICLE{11162561,
@@ -68,8 +67,8 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-08-07",
     doi: "10.1109/TFUZZ.2025.3596689",
-    volume: "",
-    pages: "",
+    volume: "33",
+    pages: "3529-3541",
     bib:`@ARTICLE{11119305,
           author={Zhan, Jiaxin and Cai, Mingjie and Li, Qingguo},
           journal={IEEE Transactions on Fuzzy Systems}, 
