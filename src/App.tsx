@@ -35,10 +35,10 @@ const PUBLICATIONS = [
   {
     authors: "Jiangyuan Wang, Qiong Liu*, Mingjie Cai*, Weiping Ding",
     title: "Neural connected kernel based multiple kernel clustering, Information Fusion",
-    venue: "Knowledge-Based Systems",
+    venue: "Information Fusion",
     year: "2026",
     date:"2026-01",
-    doi: "10.1016/j.knosys.2026.115717",
+    doi: "10.1016/j.inffus.2025.103460",
     opensource: true, 
     volume: "125",
     pages: "103460",
@@ -747,8 +747,12 @@ export default function App() {
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
                 ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
-              <p className="block">WoS: GQO-8825-2022</p>
-              <p className="block">Scopus ID: 56405957700</p>
+              <a href="https://www.webofscience.com/wos/author/record/GQO-8825-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
+                WoS: GQO-8825-2022 <ExternalLink size={12} />
+              </a>
+              <a href="https://www.scopus.com/authid/detail.uri?authorId=56405957700" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
+                Scopus ID: 56405957700<ExternalLink size={12} />
+              </a>
             </div>
           </div>
         </nav>
