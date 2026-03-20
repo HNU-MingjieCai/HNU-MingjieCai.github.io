@@ -842,7 +842,8 @@ export default function App() {
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
-                HOMEPAGE (
+                <p>HOMEPAGE</p> 
+                (
                 <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
                 ,{" "}
                 <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">English</a>
@@ -850,12 +851,12 @@ export default function App() {
               </p>
             </div>
             <div className="space-y-2">
-              <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p>
+              <p className="font-bold text-white/40 uppercase tracking-widest text-xs"> </p>
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
                 ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
-              <p className="block">WoS: GQO-8825-2022</p>
-              <p className="block">Scopus ID: 56405957700</p>
+              {/* <p className="block">WoS: GQO-8825-2022</p>
+              <p className="block">Scopus ID: 56405957700</p>  */}
             </div>
           </div>
         </nav>
