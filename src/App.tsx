@@ -10,6 +10,24 @@ import { motion } from 'motion/react';
 // Mock data for the homepage
 const PUBLICATIONS = [
   {
+    authors: "Chenxing Jia, Chaoqun Huang, Mingjie Cai*, Weiping Ding",
+    title: "Local hyperplane-constrained self-representation for manifold clustering",
+    venue: "Information Processing & Management",
+    year: "2026",
+    date:"2026-03-19",
+    doi: "10.1016/j.ipm.2026.104757",
+    volume: "63",
+    pages: "104757",
+    bib:`@article{cai2026hyperplane,
+          title={Local hyperplane-constrained self-representation for manifold clustering},
+          author={Jia, Chenxing and Huang, Chaoqun and Cai, Mingjie and Ding, Weiping},
+          journal={Information Processing & Management},
+          pages={104757},
+          year={2026},
+          publisher={Elsevier}
+        }`
+  },
+  {
     authors: "Mingjie Cai, Chutian Zhou, Chaoqun Huang*, Jiaxin Zhan, Hamido Fujita",
     title: "Elastic agents in cooperative feature selection through multi-agent reinforcement learning",
     venue: "Knowledge-Based Systems",
