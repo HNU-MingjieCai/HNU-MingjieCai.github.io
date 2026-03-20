@@ -16,6 +16,7 @@ const PUBLICATIONS = [
     year: "2026",
     date:"2026-03-19",
     doi: "10.1016/j.ipm.2026.104757",
+    opensource: true,
     volume: "63",
     pages: "104757",
     bib:`@article{cai2026hyperplane,
@@ -851,10 +852,11 @@ export default function App() {
               </p>
             </div>
             <div className="space-y-2">
-              <p className="font-bold text-white/40 uppercase tracking-widest text-xs"> </p>
-              <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
-              </a>
+              {/*<p className="font-bold text-white/40 uppercase tracking-widest text-xs"> </p>*/}
+              <p className="block"><a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
+                ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />              </a></p>
+              <p className="block"><a href="https://scholar.google.com/citations?user=TRlJc-UAAAAJ" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
+                Google Scholar <ExternalLink size={12} /></a></p>
               {/* <p className="block">WoS: GQO-8825-2022</p>
               <p className="block">Scopus ID: 56405957700</p>  */}
             </div>
