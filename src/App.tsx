@@ -10,35 +10,13 @@ import { motion } from 'motion/react';
 // Mock data for the homepage
 const PUBLICATIONS = [
   {
-    authors: "Chenxing Jia, Chaoqun Huang, Mingjie Cai*, Weiping Ding",
-    title: "Local hyperplane-constrained self-representation for manifold clustering",
-    venue: "Information Processing & Management",
-    year: "2026",
-    date:"2026-03-19",
-    doi: "10.1016/j.ipm.2026.104757",
-    volume: "63",
-    pages: "104757",
-    bib:`@article{JIA2026104757,
-          title = {Local hyperplane-constrained self-representation for manifold clustering},
-          journal = {Information Processing & Management},
-          volume = {63},
-          number = {6},
-          pages = {104757},
-          year = {2026},
-          issn = {0306-4573},
-          doi = {https://doi.org/10.1016/j.ipm.2026.104757},
-          url = {https://www.sciencedirect.com/science/article/pii/S0306457326001482},
-          author = {Chenxing Jia and Chaoqun Huang and Mingjie Cai and Weiping Ding},
-          keywords = {Manifold clustering, Hyperplane-constrained, Self-representation, Subspace clustering, Optimization}
-        }`
-  },
-  {
     authors: "Mingjie Cai, Chutian Zhou, Chaoqun Huang*, Jiaxin Zhan, Hamido Fujita",
     title: "Elastic agents in cooperative feature selection through multi-agent reinforcement learning",
     venue: "Knowledge-Based Systems",
     year: "2026",
     date:"2026-03-06",
     doi: "10.1016/j.knosys.2026.115717",
+    opensource: true, 
     volume: "340",
     pages: "115717",
     bib:`@article{cai2026elastic,
@@ -57,6 +35,7 @@ const PUBLICATIONS = [
     year: "2026",
     date:"2026-01",
     doi: "10.1016/j.knosys.2026.115717",
+    opensource: true, 
     volume: "125",
     pages: "103460",
     bib:``
@@ -69,6 +48,7 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-09-12",
     doi: "10.1109/TFUZZ.2025.3608935",
+    opensource: false, 
     volume: "33",
     pages: "4044-4054",
     bib:`@ARTICLE{11162561,
@@ -90,8 +70,8 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-08-07",
     doi: "10.1109/TFUZZ.2025.3596689",
-    volume: "33",
-    pages: "3529-3541",
+    volume: "",
+    pages: "",
     bib:`@ARTICLE{11119305,
           author={Zhan, Jiaxin and Cai, Mingjie and Li, Qingguo},
           journal={IEEE Transactions on Fuzzy Systems}, 
@@ -462,7 +442,7 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
-  
+    opensource: true, 
     volume: "244",
     pages: "122965",
     bib:``
@@ -473,7 +453,8 @@ const PUBLICATIONS = [
     venue: "Information Fusion",
     year: "2024",
     date:"",
-    doi: "", 
+    doi: "",
+    opensource: true, 
     volume: "103",
     pages: "102137",
     bib:``
@@ -485,6 +466,7 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "150",
     pages: "111066",
     bib:``
@@ -496,6 +478,7 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "164",
     pages: "109075",
     bib:``
@@ -507,6 +490,7 @@ const PUBLICATIONS = [
     year: "2024",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "8",
     pages: "288299",
     bib:``
@@ -521,6 +505,7 @@ const PUBLICATIONS = [
     year: "2023",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "124",
     pages: "106509",
     bib:``
@@ -531,6 +516,7 @@ const PUBLICATIONS = [
     year: "2023",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "622",
     pages: "710-730",
     bib:``
@@ -541,6 +527,7 @@ const PUBLICATIONS = [
     year: "2022",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "583",
     pages: "33-35",
     bib:``
@@ -551,6 +538,7 @@ const PUBLICATIONS = [
     year: "2022",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "145",
     pages: "18-35",
     bib:``
@@ -561,6 +549,7 @@ const PUBLICATIONS = [
     year: "2022",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "52",
     pages: "17636-17651",
     bib:``
@@ -571,6 +560,7 @@ const PUBLICATIONS = [
     year: "2019",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "60",
     pages: "1081-1104",
     bib:``
@@ -582,6 +572,7 @@ const PUBLICATIONS = [
     year: "2019",
     date:"",
     doi: "",
+    opensource: true, 
     volume: "172",
     pages: "130-140",
     bib:``
@@ -833,8 +824,7 @@ export default function App() {
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
-                <p>HOMEPAGE</p>
-                (
+                HOMEPAGE (
                 <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
                 ,{" "}
                 <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">English</a>
@@ -842,14 +832,12 @@ export default function App() {
               </p>
             </div>
             <div className="space-y-2">
-              {/* <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p> */}
+              <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p>
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
                 ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
-              <a href="https://scholar.google.com/citations?user=TRlJc-UAAAAJ" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
-                Google Scholar <ExternalLink size={12} />
-              {/* <p className="block">WoS: GQO-8825-2022</p>
-              <p className="block">Scopus ID: 56405957700</p> */}
+              <p className="block">WoS: GQO-8825-2022</p>
+              <p className="block">Scopus ID: 56405957700</p>
             </div>
           </div>
         </nav>
@@ -930,7 +918,7 @@ export default function App() {
 
         {/* Footer */}
         <footer className="max-w-5xl mx-auto px-8 py-12 mt-12 border-t border-slate-100 flex justify-center items-center text-xs text-slate-400">
-          <p>© 2026 ISGroup. All rights reserved.</p>
+          <p>© 2026 IS. All rights reserved.</p>
         </footer>
       </main>
 
