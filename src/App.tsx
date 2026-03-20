@@ -10,6 +10,29 @@ import { motion } from 'motion/react';
 // Mock data for the homepage
 const PUBLICATIONS = [
   {
+    authors: "Chenxing Jia, Chaoqun Huang, Mingjie Cai*, Weiping Ding",
+    title: "Local hyperplane-constrained self-representation for manifold clustering",
+    venue: "Information Processing & Management",
+    year: "2026",
+    date:"2026-03-19",
+    doi: "10.1016/j.ipm.2026.104757",
+    volume: "63",
+    pages: "104757",
+    bib:`@article{JIA2026104757,
+          title = {Local hyperplane-constrained self-representation for manifold clustering},
+          journal = {Information Processing & Management},
+          volume = {63},
+          number = {6},
+          pages = {104757},
+          year = {2026},
+          issn = {0306-4573},
+          doi = {https://doi.org/10.1016/j.ipm.2026.104757},
+          url = {https://www.sciencedirect.com/science/article/pii/S0306457326001482},
+          author = {Chenxing Jia and Chaoqun Huang and Mingjie Cai and Weiping Ding},
+          keywords = {Manifold clustering, Hyperplane-constrained, Self-representation, Subspace clustering, Optimization}
+        }`
+  },
+  {
     authors: "Mingjie Cai, Chutian Zhou, Chaoqun Huang*, Jiaxin Zhan, Hamido Fujita",
     title: "Elastic agents in cooperative feature selection through multi-agent reinforcement learning",
     venue: "Knowledge-Based Systems",
@@ -810,7 +833,8 @@ export default function App() {
           <div className="px-6 py-6 space-y-5 text-sm text-white/60 border-t border-white/10 mt-4">
             <div className="space-y-2">
               <p className="font-bold text-white/40 uppercase tracking-widest text-xs">
-                HOMEPAGE (
+                <p>HOMEPAGE</p>
+                (
                 <a href="https://grzy.hnu.edu.cn/site/index/caimingjie" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">Chinese</a>
                 ,{" "}
                 <a href="https://hnu-mingjiecai.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-2">English</a>
@@ -818,12 +842,14 @@ export default function App() {
               </p>
             </div>
             <div className="space-y-2">
-              <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p>
+              {/* <p className="font-bold text-white/40 uppercase tracking-widest text-xs">Researcher IDs</p> */}
               <a href="https://orcid.org/0000-0003-3652-2022" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
                 ORCID: 0000-0003-3652-2022 <ExternalLink size={12} />
               </a>
-              <p className="block">WoS: GQO-8825-2022</p>
-              <p className="block">Scopus ID: 56405957700</p>
+              <a href="https://scholar.google.com/citations?user=TRlJc-UAAAAJ" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors flex items-center gap-1">
+                Google Scholar <ExternalLink size={12} />
+              {/* <p className="block">WoS: GQO-8825-2022</p>
+              <p className="block">Scopus ID: 56405957700</p> */}
             </div>
           </div>
         </nav>
@@ -904,7 +930,7 @@ export default function App() {
 
         {/* Footer */}
         <footer className="max-w-5xl mx-auto px-8 py-12 mt-12 border-t border-slate-100 flex justify-center items-center text-xs text-slate-400">
-          <p>© 2026 IS. All rights reserved.</p>
+          <p>© 2026 ISGroup. All rights reserved.</p>
         </footer>
       </main>
 
