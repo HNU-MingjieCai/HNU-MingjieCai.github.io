@@ -184,7 +184,8 @@ const PUBLICATIONS = [
     venue: "Fuzzy Sets and Systems",
     year: "2025",
     date:"2025-05-15",
-    opensource: false, 
+    opensource: true,
+    codeLink:"https://github.com/HNU-MingjieCai/PFRS". 
     recivetime:"2025-05-10",
     publishtime:"2025-05-15",
     doi:"10.1016/j.fss.2025.109460",
