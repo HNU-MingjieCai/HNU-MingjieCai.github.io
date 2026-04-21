@@ -103,7 +103,7 @@ Error generating stack: `+i.message+`
             pages={104757},
             year={2026},
             publisher={Elsevier}
-          }`},{authors:"Mingjie Cai, Chutian Zhou, Chaoqun Huang*, Jiaxin Zhan, Hamido Fujita",title:"Elastic agents in cooperative feature selection through multi-agent reinforcement learning",venue:"Knowledge-Based Systems",year:"2026",date:"2026-03-06",doi:"10.1016/j.knosys.2026.115717",opensource:!1,volume:"340",recivetime:"2026-03-04",publishtime:"2026-03-06",pages:"115717",bib:`@article{cai2026elastic,
+          }`},{authors:"Mingjie Cai, Chutian Zhou, Chaoqun Huang*, Jiaxin Zhan, Hamido Fujita",title:"Elastic agents in cooperative feature selection through multi-agent reinforcement learning",venue:"Knowledge-Based Systems",year:"2026",date:"2026-03-06",doi:"10.1016/j.knosys.2026.115717",opensource:!0,codeLink:"https://github.com/ChuTianZhou/EACFS",volume:"340",recivetime:"2026-03-04",publishtime:"2026-03-06",pages:"115717",bib:`@article{cai2026elastic,
             title={Elastic Agents in Cooperative Feature Selection through Multi-Agent Reinforcement Learning},
             author={Cai, Mingjie and Zhou, Chutian and Huang, Chaoqun and Zhan, Jiaxin and Fujita, Hamido},
             journal={Knowledge-Based Systems},
