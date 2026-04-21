@@ -161,7 +161,7 @@ Error generating stack: `+i.message+`
           url = {https://www.sciencedirect.com/science/article/pii/S1568494625007756},
           author = {Baochang Ren and Mingjie Cai and Bin Yu},
           keywords = {V-IGM principle, Multi-Dueling framework, Deep reinforcement learning, MDF},
-          }`},{authors:"Mingjie Cai, Dongying Qi, Chaoqun Huang*, Jiaxin Zhan",title:"Prototype-based fuzzy rough sets for outlier detection",venue:"Fuzzy Sets and Systems",year:"2025",date:"2025-05-15",opensource:!1,recivetime:"2025-05-10",publishtime:"2025-05-15",doi:"10.1016/j.fss.2025.109460",volume:"517",pages:"109460",bib:`@article{@article{CAI2025109460,
+          }`},{authors:"Mingjie Cai, Dongying Qi, Chaoqun Huang*, Jiaxin Zhan",title:"Prototype-based fuzzy rough sets for outlier detection",venue:"Fuzzy Sets and Systems",year:"2025",date:"2025-05-15",opensource:!0,codeLink:"https://github.com/HNU-MingjieCai/PFRS",recivetime:"2025-05-10",publishtime:"2025-05-15",doi:"10.1016/j.fss.2025.109460",volume:"517",pages:"109460",bib:`@article{@article{CAI2025109460,
           title = {Prototype-based fuzzy rough sets for outlier detection},
           journal = {Fuzzy Sets and Systems},
           volume = {517},
