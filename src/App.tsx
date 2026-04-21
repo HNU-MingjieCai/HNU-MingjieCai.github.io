@@ -185,7 +185,7 @@ const PUBLICATIONS = [
     year: "2025",
     date:"2025-05-15",
     opensource: true,
-    codeLink:"https://github.com/HNU-MingjieCai/PFRS". 
+    codeLink:"https://github.com/HNU-MingjieCai/PFRS",
     recivetime:"2025-05-10",
     publishtime:"2025-05-15",
     doi:"10.1016/j.fss.2025.109460",
