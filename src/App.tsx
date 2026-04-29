@@ -57,7 +57,7 @@ const PUBLICATIONS = [
       authors: "Jiangyuan Wang, Qiong Liu*, Mingjie Cai*, Weiping Ding",
       title: "Neural connected kernel based multiple kernel clustering",
       venue: "Information Fusion",
-      year: "2025",
+      year: "2026",
       date:"2025-07-04",
       doi: "10.1016/j.inffus.2025.103460",
       opensource: false, 
@@ -783,6 +783,18 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [showToast, setShowToast] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [avatarClicks, setAvatarClicks] = useState(0);
+  const [showVisitorPopup, setShowVisitorPopup] = useState(false);
+
+  const handleAvatarClick = () => {
+    const next = avatarClicks + 1;
+    if (next >= 5) {
+      setAvatarClicks(0);
+      setShowVisitorPopup(true);
+    } else {
+      setAvatarClicks(next);
+    }
+  };
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -1031,7 +1043,7 @@ export default function App() {
         {/* Mobile Header */}
         <header className="lg:hidden sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <button 
+            <button
               onClick={() => setIsMenuOpen(true)}
               className="p-2 -ml-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
             >
@@ -1039,10 +1051,13 @@ export default function App() {
             </button>
             <span className="font-bold text-slate-900 tracking-tight">Mingjie Cai</span>
           </div>
-          <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
-            <img 
-              src="https://imggrzy.hnu.edu.cn/image/f94698cd-9ad3-a644-a2b9-b82b5158c594.jpg" 
-              alt="Mingjie Cai" 
+          <div
+            className="w-8 h-8 rounded-full overflow-hidden border border-slate-200 cursor-pointer"
+            onClick={handleAvatarClick}
+          >
+            <img
+              src="https://imggrzy.hnu.edu.cn/image/f94698cd-9ad3-a644-a2b9-b82b5158c594.jpg"
+              alt="Mingjie Cai"
               className="w-full h-full object-cover"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = "https://picsum.photos/seed/profile/100/100";
@@ -1057,10 +1072,13 @@ export default function App() {
           <div className="text-right">
             <p className="text-sm font-semibold text-slate-700">Mingjie Cai</p>
           </div>
-          <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
-            <img 
-              src="https://imggrzy.hnu.edu.cn/image/f94698cd-9ad3-a644-a2b9-b82b5158c594.jpg" 
-              alt="Mingjie Cai" 
+          <div
+            className="w-8 h-8 rounded-full overflow-hidden border border-slate-200 cursor-pointer"
+            onClick={handleAvatarClick}
+          >
+            <img
+              src="https://imggrzy.hnu.edu.cn/image/f94698cd-9ad3-a644-a2b9-b82b5158c594.jpg"
+              alt="Mingjie Cai"
               className="w-full h-full object-cover"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = "https://picsum.photos/seed/profile/100/100";
@@ -1091,6 +1109,46 @@ export default function App() {
           <p>© 2026 ISGroup. All rights reserved.</p>
         </footer>
       </main>
+
+      {/* Visitor Popup */}
+      {showVisitorPopup && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+          onClick={() => setShowVisitorPopup(false)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl p-8 text-center space-y-4 min-w-[280px]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="text-slate-400 text-sm uppercase tracking-widest">Visitor Stats</p>
+            <div className="space-y-2">
+              <p className="text-3xl font-bold text-slate-900">
+                {(() => {
+                  const pv = document.getElementById('busuanzi_value_site_pv')?.textContent;
+                  return pv ? pv : '--';
+                })()}
+              </p>
+              <p className="text-slate-500 text-sm">Total Page Views</p>
+            </div>
+            <div className="w-full h-px bg-slate-100" />
+            <div className="space-y-2">
+              <p className="text-3xl font-bold text-slate-900">
+                {(() => {
+                  const uv = document.getElementById('busuanzi_value_site_uv')?.textContent;
+                  return uv ? uv : '--';
+                })()}
+              </p>
+              <p className="text-slate-500 text-sm">Total Unique Visitors</p>
+            </div>
+            <button
+              onClick={() => setShowVisitorPopup(false)}
+              className="mt-4 px-6 py-2 bg-slate-900 text-white text-sm rounded-full hover:bg-slate-700 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Mobile Menu Button (Removed in favor of top header) */}
       {/* Toast Notification */}
