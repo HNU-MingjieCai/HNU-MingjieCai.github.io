@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Mail, Github, ExternalLink, ChevronRight, FileArchive, Menu, X } from 'lucide-react';
+import { Mail, Github, ExternalLink, ChevronRight, Menu, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
 // Mock data for the homepage
@@ -890,14 +890,13 @@ export default function App() {
                             </div>
                           </div> */}
                           {pub.opensource && (
-                            <a 
-                              href={(pub as any).codeLink || "#"} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="inline-flex items-center ml-2 text-slate-500 hover:text-blue-600 transition-colors align-middle"
-                              title="GitHub"
+                            <a
+                              href={(pub as any).codeLink || "#"}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline font-medium ml-2"
                             >
-                              <FileArchive size={16} />
+                              [Code]
                             </a>
                           )}
                         </div>
