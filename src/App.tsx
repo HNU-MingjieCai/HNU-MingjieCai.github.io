@@ -135,7 +135,7 @@ const PUBLICATIONS = [
       volume: "33",
       recivetime:"2025-08-04",
       publishtime:"2025-08-07",
-      opensource: true,
+      opensource: false,
       codeLinK:"https://github.com/JustinaZhan/Datasets-and-code",
       pages: "3529-3541",
       bib:`@ARTICLE{11119305,
@@ -307,7 +307,7 @@ const PUBLICATIONS = [
     venue: "Expert Systems with Applications",
     year: "2025",
     date:"2024-11-10",
-    opensource: true, 
+    opensource: false, 
     codeLinK:"https://github.com/JustinaZhan/Datasets-and-code",
     doi:"10.1016/j.eswa.2024.125705",
     volume: "263",
@@ -784,7 +784,7 @@ const PUBLICATIONS = [
 ];
 
 const GROUP_MEMBERS = [
-  { name: "Mingjie Cai", role: "Professor", title: "Doctoral Tutor", image: "/images/caimingjie.jpg" },
+  { name: "Mingjie Cai", role: "Professor", title: "Doctoral Supervisor", image: "/images/caimingjie.jpg" },
   { name: "Chaoqun Huang", role: "Assistant Professor", image: "/images/huangchaoqun.jpg" },
   { name: "Feng Xu", role: "Assistant Professor", title: "", image: "/images/xufeng.jpg" },
   { name: "Zhenhua Jia", role: "Assistant Professor", title: "", image: "/images/jiazhenhua.jpg" },
