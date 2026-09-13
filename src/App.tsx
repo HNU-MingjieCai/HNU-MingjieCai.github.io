@@ -10,11 +10,73 @@ import { motion } from 'motion/react';
 // Mock data for the homepage
 const PUBLICATIONS = [
   {
+    authors: "Liangzhou Chen, Mingjie Cai*, Chaoqun Huang",
+    title: "Contrastive label enhancement-based multi-label feature selection",
+    venue: "Pattern Recognition",
+    year: "2027",
+    onlineDate: "2026-09-09",
+    doi: "10.1016/j.patcog.2026.114879",
+    opensource: false,
+    volume: "183",
+    pages: "114879",
+    bib: `@article{chen2027contrastive,
+      title={Contrastive label enhancement-based multi-label feature selection},
+      author={Chen, Liangzhou and Cai, Mingjie and Huang, Chaoqun},
+      journal={Pattern Recognition},
+      volume={183},
+      pages={114879},
+      year={2027},
+      publisher={Elsevier}
+    }`
+  },
+  {
+    authors: "Yangchun Yin, Ruihui Xu*, Chaoqun Huang*, Mingjie Cai",
+    title: "Self-representation discriminative graph learning for supervised feature selection",
+    venue: "Information Sciences",
+    year: "2027",
+    onlineDate: "2026-09-03",
+    doi: "10.1016/j.ins.2026.124102",
+    opensource: false,
+    volume: "760",
+    pages: "124102",
+    bib: `@article{yin2027self,
+      title={Self-representation discriminative graph learning for supervised feature selection},
+      author={Yin, Yangchun and Xu, Ruihui and Huang, Chaoqun and Cai, Mingjie},
+      journal={Information Sciences},
+      volume={760},
+      pages={124102},
+      year={2027},
+      publisher={Elsevier}
+    }`
+  },
+  {
+    authors: "Jiaxin Zhan, Chaoqun Huang, Mingjie Cai*, Hamido Fujita",
+    title: "Granular ball-based evolutionary game consensus for large-scale data with fuzzy social networks",
+    venue: "International Journal of Approximate Reasoning",
+    year: "2026",
+    onlineDate: "2026-08-25",
+    doi: "10.1016/j.ijar.2026.109811",
+    opensource: true,
+    codeLink: "https://github.com/JustinaZhan/GBLSGDM",
+    volume: "199",
+    pages: "109811",
+    bib: `@article{zhan2026granular,
+      title={Granular ball-based evolutionary game consensus for large-scale data with fuzzy social networks},
+      author={Zhan, Jiaxin and Huang, Chaoqun and Cai, Mingjie and Fujita, Hamido},
+      journal={International Journal of Approximate Reasoning},
+      volume={199},
+      pages={109811},
+      year={2026},
+      publisher={Elsevier}
+    }`
+  },
+  {
     "authors": "Gongao Qi, Xiangnan Zhou*, Chaoqun Huang",
     "title": "Label distribution-driven semantic discrimination enhanced hashing for cross-modal retrieval",
     "venue": "Information Processing & Management",
     "year": "2026",
     "date": "2026-04-29",
+    "onlineDate": "2026-04-29",
     "doi": "10.1016/j.ipm.2026.104853",
     "opensource": true,
     "volume": "63",
@@ -38,6 +100,7 @@ const PUBLICATIONS = [
       venue: "Information Processing & Management",
       year: "2026",
       date:"2026-03-19",
+      onlineDate:"2026-03-19",
       doi: "10.1016/j.ipm.2026.104757",
       opensource: true,
       volume: "63",
@@ -60,6 +123,7 @@ const PUBLICATIONS = [
       venue: "Knowledge-Based Systems",
       year: "2026",
       date:"2026-03-06",
+      onlineDate:"2026-03-06",
       doi: "10.1016/j.knosys.2026.115717",
       opensource: true, 
       codeLink:"https://github.com/ChuTianZhou/EACFS",
@@ -82,6 +146,7 @@ const PUBLICATIONS = [
       venue: "Information Fusion",
       year: "2026",
       date:"2025-07-04",
+      onlineDate:"2025-07-04",
       doi: "10.1016/j.inffus.2025.103460",
       opensource: true,
       codeLink:"https://github.com/ukubulin/NCKMKC", 
@@ -105,6 +170,7 @@ const PUBLICATIONS = [
       venue: "IEEE Transactions on Fuzzy Systems",
       year: "2025",
       date:"2025-09-12",
+      onlineDate:"2025-09-12",
       doi: "10.1109/TFUZZ.2025.3608935",
       opensource: true, 
       codeLinK:"https://github.com/JustinaZhan/Datasets-and-code",
@@ -131,6 +197,7 @@ const PUBLICATIONS = [
       venue: "IEEE Transactions on Fuzzy Systems",
       year: "2025",
       date:"2025-08-07",
+      onlineDate:"2025-08-07",
       doi: "10.1109/TFUZZ.2025.3596689",
       volume: "33",
       recivetime:"2025-08-04",
@@ -158,6 +225,7 @@ const PUBLICATIONS = [
       venue: "Neurocomputing",
       year: "2025",
       date:"2025-08-07",
+      onlineDate:"2025-08-07",
       doi: "10.1016/j.neucom.2025.131152",
       volume: "653",
       recivetime:"2025-07-30",
@@ -184,6 +252,7 @@ const PUBLICATIONS = [
       venue: "Applied Soft Computing",
       year: "2025",
       date:"2025-06-21",
+      onlineDate:"2025-06-21",
       doi:"10.1016/j.asoc.2025.113464",
       volume: "181",
       recivetime:"2025-06-05",
@@ -209,6 +278,7 @@ const PUBLICATIONS = [
     venue: "Fuzzy Sets and Systems",
     year: "2025",
     date:"2025-05-15",
+    onlineDate:"2025-05-15",
     opensource: true,
     codeLink:"https://github.com/HNU-MingjieCai/PFRS",
     recivetime:"2025-05-10",
@@ -235,6 +305,7 @@ const PUBLICATIONS = [
     venue: "Knowledge-Based Systems",
     year: "2025",
     date:"2025-04-19",
+    onlineDate:"2025-04-19",
     opensource: true, 
     codeLink:"https://github.com/HNU-MingjieCai/wjy_kbs.git",
     doi:"10.1016/j.knosys.2025.113498",
@@ -261,6 +332,7 @@ const PUBLICATIONS = [
     venue: "Fuzzy Sets and Systems",
     year: "2025",
     date:"2025-03-12",
+    onlineDate:"2025-03-12",
     opensource: true, 
     codeLink:"https://github.com/ChenLiangZhou0402/HSR-MLFS.git",
     doi:"10.1016/j.fss.2025.109368",
@@ -284,6 +356,7 @@ const PUBLICATIONS = [
     venue: "IEEE Transactions on Fuzzy Systems",
     year: "2025",
     date:"2024-11-08",
+    onlineDate:"2024-11-08",
     opensource: false, 
     doi:"10.1109/TFUZZ.2024.3494864",
     volume: "33",
@@ -307,6 +380,7 @@ const PUBLICATIONS = [
     venue: "Expert Systems with Applications",
     year: "2025",
     date:"2024-11-10",
+    onlineDate:"2024-11-10",
     opensource: false, 
     codeLinK:"https://github.com/JustinaZhan/Datasets-and-code",
     doi:"10.1016/j.eswa.2024.125705",
@@ -330,6 +404,7 @@ const PUBLICATIONS = [
     venue: "International Journal of Approximate Reasoning",
     year: "2025",
     date:"2024-11-06",
+    onlineDate:"2024-11-06",
     opensource: true,
     codeLink:"https://github.com/Only-sole/Multi-label-feature-selection-based-on-adaptive-label-enhancement-and-class-imbalance-aware-fuzzy",  
     doi:"10.1016/j.ijar.2024.109320",
@@ -354,6 +429,7 @@ const PUBLICATIONS = [
     venue: "International Journal of Approximate Reasoning",
     year: "2024",
     date:"2024-08-22",
+    onlineDate:"2024-08-22",
     opensource: false, 
     doi: "10.1016/j.ijar.2024.109271",
     volume: "174",
@@ -376,6 +452,7 @@ const PUBLICATIONS = [
     venue: "Applied Soft Computing",
     year: "2024",
     date:"2024-08-14",
+    onlineDate:"2024-08-14",
     opensource: true,
     codeLink:"https://github.com/Only-sole/Supervised-spectral-feature-selection-with-neighborhood-rough-set", 
     doi: "10.1016/j.asoc.2024.112111",
@@ -399,6 +476,7 @@ const PUBLICATIONS = [
     venue: "Applied Soft Computing",
     year: "2024",
     date:"2024-05-19",
+    onlineDate:"2024-05-19",
     opensource: true,
     codeLink:"https://github.com/HNU-MingjieCai/CDBC.git", 
     doi: "10.1016/j.asoc.2024.111779",
@@ -422,6 +500,7 @@ const PUBLICATIONS = [
     venue: "Fuzzy Sets and Systems",
     year: "2024",
     date:"2024-04-24",
+    onlineDate:"2024-04-30",
     doi: "10.1016/j.fss.2024.108993",
     opensource:false,
     volume: "487",
@@ -444,6 +523,7 @@ const PUBLICATIONS = [
     venue: "Applied Intelligence",
     year: "2024",
     date:"2024-03-13",
+    onlineDate:"2024-03-13",
     doi: "10.1007/s10489-024-05368-3",
     opensource:false,
     volume: "54",
@@ -467,6 +547,7 @@ const PUBLICATIONS = [
     venue: "International Journal of Approximate Reasoning",
     year: "2024",
     date:"2024-02-15",
+    onlineDate:"2024-02-22",
     doi: "10.1016/j.ijar.2024.109149",
     opensource: true, 
     codeLink:"https://github.com/HNU-MingjieCai/EF_MLLD_FRS.git",
@@ -490,6 +571,7 @@ const PUBLICATIONS = [
     venue: "IEEE Transactions on Fuzzy Systems",
     year:"2023",
     date:"2024-05-01",
+    onlineDate:"2024-05-07",
     doi: "10.1109/TFUZZ.2024.3397808",
     opensource: false, 
     volume: "32",
@@ -514,6 +596,7 @@ const PUBLICATIONS = [
     venue: "Topology and its Applications",
     year: "2024",
     date:"2024-11-03",
+    onlineDate:"2024-01-17",
     doi: "10.1016/j.topol.2024.108829",
     opensource: false, 
     volume: "344",
@@ -537,6 +620,7 @@ const PUBLICATIONS = [
     venue: "Fuzzy Sets and Systems",
     year: "2024",
     date:"2024-01-06",
+    onlineDate:"2024-01-11",
     doi: "10.1016/j.fss.2024.108860",
     opensource: false, 
     volume: "480",
@@ -559,6 +643,7 @@ const PUBLICATIONS = [
     venue: "Expert Systems with Applications",
     year: "2024",
     date:"2024-12-13",
+    onlineDate:"2023-12-16",
     doi: "10.1016/j.eswa.2023.122965",
     opensource: true,
     codeLink:"https://github.com/HNU-MingjieCai/SNRS.git", 
@@ -582,6 +667,7 @@ const PUBLICATIONS = [
     venue: "Information Fusion",
     year: "2024",
     date:"2023-11-07",
+    onlineDate:"2023-11-10",
     doi: "10.1016/j.inffus.2023.102137",
     opensource: false, 
     volume: "103",
@@ -604,6 +690,7 @@ const PUBLICATIONS = [
     venue: "Applied Soft Computing",
     year: "2024",
     date:"2023-11-16",
+    onlineDate:"2023-11-18",
     doi: "10.1016/j.asoc.2023.111066",
     opensource: true,
     codeLink:"https://github.com/HNU-MingjieCai/capsule-4578877.git", 
@@ -627,6 +714,7 @@ const PUBLICATIONS = [
     venue: "International Journal of Approximate Reasoning",
     year: "2024",
     date:"2023-10-26",
+    onlineDate:"2023-10-31",
     doi: "10.1016/j.ijar.2023.109075",
     opensource: false, 
     volume: "164",
@@ -649,6 +737,7 @@ const PUBLICATIONS = [
     venue: "IEEE Transactions on Emerging Topics in Computational Intelligence",
     year: "2024",
     date:"2023-07-08",
+    onlineDate:"2023-08-11",
     doi: "10.1109/TETCI.2023.3300303",
     opensource: false, 
     volume: "8",
@@ -673,6 +762,7 @@ const PUBLICATIONS = [
     venue: "Engineering Applications of Artificial Intelligence",
     year: "2023",
     date:"2023-05-19",
+    onlineDate:"2023-06-07",
     doi: "10.1016/j.engappai.2023.106509",
     opensource: false, 
     volume: "124",
@@ -695,6 +785,7 @@ const PUBLICATIONS = [
     venue: "Information Sciences",
     year: "2023",
     date:"2022-11-27",
+    onlineDate:"2022-12-05",
     doi: "10.1016/j.ins.2022.11.154",
     opensource: false, 
     volume: "622",
@@ -717,6 +808,7 @@ const PUBLICATIONS = [
     venue: "Information Sciences",
     year: "2022",
     date:"2021-10-30",
+    onlineDate:"2021-11-15",
     doi: "10.1016/j.ins.2021.10.080",
     opensource: true,
     codeLink:"https://github.com/HNU-MingjieCai/NMRS.git", 
@@ -740,6 +832,7 @@ const PUBLICATIONS = [
     venue: "International Journal of Approximate Reasoning",
     year: "2022",
     date:"2022-03-05",
+    onlineDate:"2022-03-14",
     doi: "10.1016/j.ijar.2022.03.002",
     opensource: false, 
     volume: "145",
@@ -762,6 +855,7 @@ const PUBLICATIONS = [
     venue: "Applied Intelligence",
     year: "2022",
     date:"2022-04-04",
+    onlineDate:"2022-04-04",
     doi: "10.1007/s10489-022-03371-0",
     opensource: false, 
     volume: "52",
@@ -884,7 +978,11 @@ export default function App() {
                   </h3>
                   <div className="space-y-3">
                     {sortedPubs.filter(p => p.year === year).map((pub, i) => (
-                      <div key={i} className="flex gap-3 group">
+                      <article
+                        key={pub.doi || `${pub.year}-${i}`}
+                        data-publication-doi={pub.doi}
+                        className="flex gap-3 group"
+                      >
                         <span className="text-slate-400 font-mono text-xs w-5 flex-shrink-0 pt-1">{i + 1}.</span>
                         <div className="flex-1 text-[14px] leading-relaxed text-slate-800 text-justify">
                           <span className="font-bold">{pub.authors}. </span>
@@ -931,8 +1029,15 @@ export default function App() {
                               [Code]
                             </a>
                           )}
+                          <time
+                            dateTime={pub.onlineDate}
+                            data-online-date={pub.onlineDate}
+                            className="ml-2 text-[11px] font-normal text-slate-500 whitespace-nowrap align-baseline"
+                          >
+                            Online: {pub.onlineDate}
+                          </time>
                         </div>
-                      </div>
+                      </article>
                     ))}
                   </div>
                 </div>
