@@ -6,7 +6,9 @@ import App from './App';
 
 const EXPECTED_ONLINE_DATES = [
   ['10.1016/j.patcog.2026.114879', '2026-09-09'],
+  ['10.1016/j.ins.2026.124102', '2026-09-03'],
   ['10.1016/j.ijar.2026.109811', '2026-08-25'],
+  ['10.1016/j.ipm.2026.104853', '2026-04-29'],
   ['10.1016/j.ipm.2026.104757', '2026-03-19'],
   ['10.1016/j.knosys.2026.115717', '2026-03-06'],
   ['10.1016/j.inffus.2025.103460', '2025-07-04'],
@@ -66,7 +68,7 @@ const extractPublicationOrder = (html: string) =>
     return { doi, year, onlineDate };
   });
 
-test('renders the newly requested publications that meet the author rule', () => {
+test('renders all newly requested publications', () => {
   const html = renderToStaticMarkup(<App />);
 
   const patternRecognition = extractPublication(
@@ -78,6 +80,15 @@ test('renders the newly requested publications that meet the author rule', () =>
   assert.match(patternRecognition, /Pattern Recognition/);
   assert.match(patternRecognition, /183 \(2027\) 114879/);
 
+  const informationSciences = extractPublication(
+    html,
+    '10.1016/j.ins.2026.124102',
+  );
+  assert.match(informationSciences, /Yangchun Yin, Ruihui Xu\*, Chaoqun Huang\*, Mingjie Cai/);
+  assert.match(informationSciences, /Self-representation discriminative graph learning for supervised feature selection/);
+  assert.match(informationSciences, /Information Sciences/);
+  assert.match(informationSciences, /760 \(2027\) 124102/);
+
   const approximateReasoning = extractPublication(
     html,
     '10.1016/j.ijar.2026.109811',
@@ -87,27 +98,16 @@ test('renders the newly requested publications that meet the author rule', () =>
   assert.match(approximateReasoning, /International Journal of Approximate Reasoning/);
   assert.match(approximateReasoning, /199 \(2026\) 109811/);
   assert.match(approximateReasoning, /github\.com\/JustinaZhan\/GBLSGDM/);
-});
 
-test('only includes papers where Mingjie Cai is first or corresponding author', async () => {
-  const appModule = (await import('./App')) as unknown as {
-    PUBLICATIONS: ReadonlyArray<{ authors: string; doi: string }>;
-  };
-
-  for (const publication of appModule.PUBLICATIONS) {
-    const authors = publication.authors.split(',').map(author => author.trim());
-    const isFirstAuthor = authors[0] === 'Mingjie Cai';
-    const isCorrespondingAuthor = authors.includes('Mingjie Cai*');
-
-    assert.ok(
-      isFirstAuthor || isCorrespondingAuthor,
-      `${publication.doi} must have Mingjie Cai as first or corresponding author`,
-    );
-  }
-
-  const html = renderToStaticMarkup(<App />);
-  assert.doesNotMatch(html, /10\.1016\/j\.ins\.2026\.124102/);
-  assert.doesNotMatch(html, /10\.1016\/j\.ipm\.2026\.104853/);
+  const informationProcessing = extractPublication(
+    html,
+    '10.1016/j.ipm.2026.104853',
+  );
+  assert.match(informationProcessing, /Gongao Qi, Xiangnan Zhou\*, Chaoqun Huang/);
+  assert.match(informationProcessing, /Label distribution-driven semantic discrimination enhanced hashing for cross-modal retrieval/);
+  assert.match(informationProcessing, /Information Processing &amp; Management/);
+  assert.match(informationProcessing, /63 \(2026\) 104853/);
+  assert.match(informationProcessing, /github\.com\/GongaoQi\/L3DEH/);
 });
 
 test('renders a small online date after the links for every displayed publication', () => {
