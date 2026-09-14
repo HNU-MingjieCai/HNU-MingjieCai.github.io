@@ -8,7 +8,7 @@ import { Mail, Github, ExternalLink, ChevronRight, Menu, X } from 'lucide-react'
 import { motion } from 'motion/react';
 
 // Mock data for the homepage
-const PUBLICATIONS = [
+export const PUBLICATIONS = [
   {
     authors: "Liangzhou Chen, Mingjie Cai*, Chaoqun Huang",
     title: "Contrastive label enhancement-based multi-label feature selection",
@@ -16,8 +16,7 @@ const PUBLICATIONS = [
     year: "2027",
     onlineDate: "2026-09-09",
     doi: "10.1016/j.patcog.2026.114879",
-    opensource: true,
-    codeLink: "https://github.com/ChenLiangZhou0402/CLE-LSMLFS",
+    opensource: false,
     volume: "183",
     pages: "114879",
     bib: `@article{chen2027contrastive,
@@ -570,7 +569,7 @@ const PUBLICATIONS = [
     authors: "Bin Yu, Zheng Zijian, Mingjie Cai*, Witold Pedrycz, Zeshui Xu",
     title: "CBCG: A clustering algorithm based on bidirectional conical information granularity",
     venue: "IEEE Transactions on Fuzzy Systems",
-    year:"2023",
+    year:"2024",
     date:"2024-05-01",
     onlineDate:"2024-05-07",
     doi: "10.1109/TFUZZ.2024.3397808",
@@ -878,6 +877,28 @@ const PUBLICATIONS = [
   
 ];
 
+type PublicationBibSource = {
+  authors: string;
+  bib?: string;
+  pages?: string;
+  title: string;
+  venue: string;
+  volume?: string;
+  year: string;
+};
+
+export const generateBib = (pub: PublicationBibSource) => {
+  if (pub.bib) return pub.bib;
+  const firstAuthor = pub.authors.split(',')[0].split(' ').pop();
+  const key = `${firstAuthor}${pub.year}${pub.title.split(' ')[0].toLowerCase()}`;
+  return `@article{${key},
+  author = {${pub.authors}},
+  title = {${pub.title}},
+  journal = {${pub.venue}},
+  year = {${pub.year}}${pub.volume ? `,\n  volume = {${pub.volume}}` : ""}${pub.pages ? `,\n  pages = {${pub.pages}}` : ""}
+}`;
+};
+
 const GROUP_MEMBERS = [
   { name: "Mingjie Cai", role: "Professor", title: "Doctoral Supervisor", image: "/images/caimingjie.jpg" },
   { name: "Chaoqun Huang", role: "Assistant Professor", image: "/images/huangchaoqun.jpg" },
@@ -930,23 +951,14 @@ export default function App() {
     });
   };
 
-  const generateBib = (pub: any) => {
-    if (pub.bib) return pub.bib;
-    const firstAuthor = pub.authors.split(',')[0].split(' ').pop();
-    const year = pub.year;
-    const key = `${firstAuthor}${year}${pub.title.split(' ')[0].toLowerCase()}`;
-    return `@article{${key},
-  author = {${pub.authors}},
-  title = {${pub.title}},
-  journal = {${pub.venue}},
-  year = {${pub.year}}${pub.volume ? `,\n  volume = {${pub.volume}}` : ""}${pub.pages ? `,\n  pages = {${pub.pages}}` : ""}
-}`;
-  };
-
   const renderContent = () => {
     switch (activeTab) {
       case 'Publications':
-        const sortedPubs = [...PUBLICATIONS].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+        const sortedPubs = [...PUBLICATIONS].sort((a, b) => {
+          const yearDifference = parseInt(b.year) - parseInt(a.year);
+
+          return yearDifference || b.onlineDate.localeCompare(a.onlineDate);
+        });
         const years = [...new Set(sortedPubs.map(p => p.year))].sort((a, b) => parseInt(b) - parseInt(a));
 
         return (

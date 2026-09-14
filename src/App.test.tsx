@@ -52,6 +52,22 @@ const extractPublication = (html: string, doi: string) => {
   return html.slice(start, end);
 };
 
+const extractPublicationOrder = (html: string) =>
+  Array.from(
+    html.matchAll(
+      /<article data-publication-doi="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g,
+    ),
+  ).map(([, doi, publication]) => {
+    const year = publication.match(/\((\d{4})\)/)?.[1];
+    const onlineDate = publication.match(
+      /data-online-date="(\d{4}-\d{2}-\d{2})"/,
+    )?.[1];
+
+    assert.ok(year, `${doi} is missing its publication year`);
+    assert.ok(onlineDate, `${doi} is missing its online date`);
+    return { doi, year, onlineDate };
+  });
+
 test('renders the three newly requested publications', () => {
   const html = renderToStaticMarkup(<App />);
 
@@ -115,6 +131,85 @@ test('renders a small online date after the links for every displayed publicatio
       publication.slice(datePosition),
       new RegExp(`class="[^"]*text-\\[11px\\][^"]*text-slate-500[^"]*"[^>]*>Online: ${onlineDate}`),
       `${doi} must render its online date as accessible muted small text`,
+    );
+  }
+});
+
+test('sorts publication years descending and online dates descending within each year', () => {
+  const publications = extractPublicationOrder(renderToStaticMarkup(<App />));
+
+  for (let index = 1; index < publications.length; index += 1) {
+    const previous = publications[index - 1];
+    const current = publications[index];
+
+    assert.ok(
+      previous.year >= current.year,
+      `${current.doi} (${current.year}) must not appear after an older publication year`,
+    );
+
+    if (previous.year === current.year) {
+      assert.ok(
+        previous.onlineDate >= current.onlineDate,
+        `${current.doi} must appear after later online dates in ${current.year}`,
+      );
+    }
+  }
+});
+
+test('shows the CBCG paper as a 2024 publication', () => {
+  const html = renderToStaticMarkup(<App />);
+  const publication = extractPublication(
+    html,
+    '10.1109/TFUZZ.2024.3397808',
+  );
+
+  assert.match(publication, /32 \(2024\) 4388-4400/);
+});
+
+test('keeps corrected publication years aligned with their BibTeX years', async () => {
+  const html = renderToStaticMarkup(<App />);
+  const engineeringApplications = extractPublication(
+    html,
+    '10.1016/j.engappai.2023.106509',
+  );
+  assert.match(engineeringApplications, /124 \(2023\) 106509/);
+
+  const appModule = (await import('./App')) as unknown as {
+    PUBLICATIONS?: ReadonlyArray<{
+      authors: string;
+      bib?: string;
+      doi: string;
+      pages?: string;
+      title: string;
+      venue: string;
+      volume?: string;
+      year: string;
+    }>;
+    generateBib?: (publication: {
+      authors: string;
+      bib?: string;
+      pages?: string;
+      title: string;
+      venue: string;
+      volume?: string;
+      year: string;
+    }) => string;
+  };
+
+  assert.ok(appModule.PUBLICATIONS, 'publication data must be reusable');
+  assert.equal(typeof appModule.generateBib, 'function');
+
+  for (const [doi, expectedYear] of [
+    ['10.1109/TFUZZ.2024.3397808', '2024'],
+    ['10.1016/j.engappai.2023.106509', '2023'],
+  ] as const) {
+    const publication = appModule.PUBLICATIONS.find((item) => item.doi === doi);
+    assert.ok(publication, `missing publication ${doi}`);
+    assert.equal(publication.year, expectedYear);
+    assert.match(
+      appModule.generateBib(publication),
+      new RegExp(`year\\s*=\\s*\\{${expectedYear}\\}`),
+      `${doi} must copy the same year shown on the page`,
     );
   }
 });
