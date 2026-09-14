@@ -99,28 +99,12 @@ Error generating stack: `+i.message+`
       pages={114879},
       year={2027},
       publisher={Elsevier}
-    }`},{authors:"Yangchun Yin, Ruihui Xu*, Chaoqun Huang*, Mingjie Cai",title:"Self-representation discriminative graph learning for supervised feature selection",venue:"Information Sciences",year:"2027",onlineDate:"2026-09-03",doi:"10.1016/j.ins.2026.124102",opensource:!1,volume:"760",pages:"124102",bib:`@article{yin2027self,
-      title={Self-representation discriminative graph learning for supervised feature selection},
-      author={Yin, Yangchun and Xu, Ruihui and Huang, Chaoqun and Cai, Mingjie},
-      journal={Information Sciences},
-      volume={760},
-      pages={124102},
-      year={2027},
-      publisher={Elsevier}
     }`},{authors:"Jiaxin Zhan, Chaoqun Huang, Mingjie Cai*, Hamido Fujita",title:"Granular ball-based evolutionary game consensus for large-scale data with fuzzy social networks",venue:"International Journal of Approximate Reasoning",year:"2026",onlineDate:"2026-08-25",doi:"10.1016/j.ijar.2026.109811",opensource:!0,codeLink:"https://github.com/JustinaZhan/GBLSGDM",volume:"199",pages:"109811",bib:`@article{zhan2026granular,
       title={Granular ball-based evolutionary game consensus for large-scale data with fuzzy social networks},
       author={Zhan, Jiaxin and Huang, Chaoqun and Cai, Mingjie and Fujita, Hamido},
       journal={International Journal of Approximate Reasoning},
       volume={199},
       pages={109811},
-      year={2026},
-      publisher={Elsevier}
-    }`},{authors:"Gongao Qi, Xiangnan Zhou*, Chaoqun Huang",title:"Label distribution-driven semantic discrimination enhanced hashing for cross-modal retrieval",venue:"Information Processing & Management",year:"2026",date:"2026-04-29",onlineDate:"2026-04-29",doi:"10.1016/j.ipm.2026.104853",opensource:!0,volume:"63",recivetime:"2026-04-29",publishtime:"2026-04-29",pages:"104853",codeLink:"https://github.com/GongaoQi/L3DEH",bib:`@article{qi2026label,
-      title={Label distribution-driven semantic discrimination enhanced hashing for cross-modal retrieval},
-      author={Qi, Gongao and Zhou, Xiangnan and Huang, Chaoqun},
-      journal={Information Processing & Management},
-      volume={63},
-      pages={104853},
       year={2026},
       publisher={Elsevier}
     }`},{authors:"Chenxing Jia, Chaoqun Huang, Mingjie Cai*, Weiping Ding",title:"Local hyperplane-constrained self-representation for manifold clustering",venue:"Information Processing & Management",year:"2026",date:"2026-03-19",onlineDate:"2026-03-19",doi:"10.1016/j.ipm.2026.104757",opensource:!0,volume:"63",recivetime:"2026-03-14",publishtime:"2026-03-19",pages:"104757",codeLink:"https://github.com/Jchenxing",bib:`@article{cai2026hyperplane,
@@ -349,7 +333,7 @@ Error generating stack: `+i.message+`
           pages={109075},
           year={2024},
           publisher={Elsevier}
-        }`},{authors:"Bin Yu, Hengjie Xie, Mingjie Cai*, Weiping Ding*",title:"MG-GCN: Multi-granularity graph convolutional neural network for multi-label classification in multi-label information system",venue:"IEEE Transactions on Emerging Topics in Computational Intelligence",year:"2024",date:"2023-07-08",onlineDate:"2023-08-11",doi:"10.1109/TETCI.2023.3300303",opensource:!1,volume:"8",recivetime:"2023-06-03",publishtime:"2023-07-08",pages:"288299",bib:`@article{yu2023mg,
+        }`},{authors:"Bin Yu, Hengjie Xie, Mingjie Cai*, Weiping Ding*",title:"MG-GCN: Multi-granularity graph convolutional neural network for multi-label classification in multi-label information system",venue:"IEEE Transactions on Emerging Topics in Computational Intelligence",year:"2024",date:"2023-07-08",onlineDate:"2023-08-11",doi:"10.1109/TETCI.2023.3300303",opensource:!1,volume:"8",recivetime:"2023-06-03",publishtime:"2023-07-08",pages:"288-299",bib:`@article{yu2023mg,
           title={MG-GCN: Multi-granularity graph convolutional neural network for multi-label classification in multi-label information system},
           author={Yu, Bin and Xie, Hengjie and Cai, Mingjie and Ding, Weiping},
           journal={IEEE Transactions on Emerging Topics in Computational Intelligence},
@@ -366,7 +350,7 @@ Error generating stack: `+i.message+`
           pages={106509},
           year={2023},
           publisher={Elsevier}
-        }`},{authors:"Lu Gao, Mingjie Cai*, Qingguo Li",title:"A relative granular ratio-based outlier detection method in heterogeneous data",venue:"Information Sciences",year:"2023",date:"2022-11-27",onlineDate:"2022-12-05",doi:"10.1016/j.ins.2022.11.154",opensource:!1,volume:"622",recivetime:"2022-07-26",publishtime:"2022-11-27",pages:"710-730",bib:`@article{gao2023relative,
+        }`},{authors:"Lu Gao, Mingjie Cai*, Qingguo Li",title:"A relative granular ratio-based outlier detection method in heterogeneous data",venue:"Information Sciences",year:"2023",date:"2022-11-27",onlineDate:"2022-12-05",doi:"10.1016/j.ins.2022.11.154",opensource:!1,volume:"622",recivetime:"2022-07-26",publishtime:"2022-11-27",pages:"710-731",bib:`@article{gao2023relative,
           title={A relative granular ratio-based outlier detection method in heterogeneous data},
           author={Gao, Lu and Cai, Mingjie and Li, Qingguo},
           journal={Information Sciences},
@@ -374,7 +358,7 @@ Error generating stack: `+i.message+`
           pages={710--731},
           year={2023},
           publisher={Elsevier}
-        }`},{authors:"Feng Xu, Mingjie Cai*, Huailing Song, Jianhua Dai",title:"The selection of feasible strategies based on consistency measurement of cliques",venue:"Information Sciences",year:"2022",date:"2021-10-30",onlineDate:"2021-11-15",doi:"10.1016/j.ins.2021.10.080",opensource:!0,codeLink:"https://github.com/HNU-MingjieCai/NMRS.git",volume:"583",recivetime:"2021-01-09",publishtime:"2021-10-30",pages:"33-35",bib:`@article{xu2022selection,
+        }`},{authors:"Feng Xu, Mingjie Cai*, Huailing Song, Jianhua Dai",title:"The selection of feasible strategies based on consistency measurement of cliques",venue:"Information Sciences",year:"2022",date:"2021-10-30",onlineDate:"2021-11-15",doi:"10.1016/j.ins.2021.10.080",opensource:!0,codeLink:"https://github.com/HNU-MingjieCai/NMRS.git",volume:"583",recivetime:"2021-01-09",publishtime:"2021-10-30",pages:"33-55",bib:`@article{xu2022selection,
           title={The selection of feasible strategies based on consistency measurement of cliques},
           author={Xu, Feng and Cai, Mingjie and Song, Huailing and Dai, Jianhua},
           journal={Information Sciences},
