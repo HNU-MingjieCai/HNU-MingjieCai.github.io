@@ -99,12 +99,28 @@ Error generating stack: `+i.message+`
       pages={114879},
       year={2027},
       publisher={Elsevier}
+    }`},{authors:"Yangchun Yin, Ruihui Xu*, Chaoqun Huang*, Mingjie Cai",title:"Self-representation discriminative graph learning for supervised feature selection",venue:"Information Sciences",year:"2027",onlineDate:"2026-09-03",doi:"10.1016/j.ins.2026.124102",opensource:!1,volume:"760",pages:"124102",bib:`@article{yin2027self,
+      title={Self-representation discriminative graph learning for supervised feature selection},
+      author={Yin, Yangchun and Xu, Ruihui and Huang, Chaoqun and Cai, Mingjie},
+      journal={Information Sciences},
+      volume={760},
+      pages={124102},
+      year={2027},
+      publisher={Elsevier}
     }`},{authors:"Jiaxin Zhan, Chaoqun Huang, Mingjie Cai*, Hamido Fujita",title:"Granular ball-based evolutionary game consensus for large-scale data with fuzzy social networks",venue:"International Journal of Approximate Reasoning",year:"2026",onlineDate:"2026-08-25",doi:"10.1016/j.ijar.2026.109811",opensource:!0,codeLink:"https://github.com/JustinaZhan/GBLSGDM",volume:"199",pages:"109811",bib:`@article{zhan2026granular,
       title={Granular ball-based evolutionary game consensus for large-scale data with fuzzy social networks},
       author={Zhan, Jiaxin and Huang, Chaoqun and Cai, Mingjie and Fujita, Hamido},
       journal={International Journal of Approximate Reasoning},
       volume={199},
       pages={109811},
+      year={2026},
+      publisher={Elsevier}
+    }`},{authors:"Gongao Qi, Xiangnan Zhou*, Chaoqun Huang",title:"Label distribution-driven semantic discrimination enhanced hashing for cross-modal retrieval",venue:"Information Processing & Management",year:"2026",date:"2026-04-29",onlineDate:"2026-04-29",doi:"10.1016/j.ipm.2026.104853",opensource:!0,volume:"63",recivetime:"2026-04-29",publishtime:"2026-04-29",pages:"104853",codeLink:"https://github.com/GongaoQi/L3DEH",bib:`@article{qi2026label,
+      title={Label distribution-driven semantic discrimination enhanced hashing for cross-modal retrieval},
+      author={Qi, Gongao and Zhou, Xiangnan and Huang, Chaoqun},
+      journal={Information Processing & Management},
+      volume={63},
+      pages={104853},
       year={2026},
       publisher={Elsevier}
     }`},{authors:"Chenxing Jia, Chaoqun Huang, Mingjie Cai*, Weiping Ding",title:"Local hyperplane-constrained self-representation for manifold clustering",venue:"Information Processing & Management",year:"2026",date:"2026-03-19",onlineDate:"2026-03-19",doi:"10.1016/j.ipm.2026.104757",opensource:!0,volume:"63",recivetime:"2026-03-14",publishtime:"2026-03-19",pages:"104757",codeLink:"https://github.com/Jchenxing",bib:`@article{cai2026hyperplane,
