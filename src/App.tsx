@@ -10,7 +10,7 @@ import { motion } from 'motion/react';
 // Mock data for the homepage
 const PUBLICATIONS = [
   {
-    authors: "iangzhou Chen, Mingjie Cai*, Chaoqun Huang",
+    authors: "Liangzhou Chen, Mingjie Cai*, Chaoqun Huang",
     title: "Contrastive label enhancement-based multi-label feature selection",
     venue: "Pattern Recognition",
     year: "2027",
