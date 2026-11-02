@@ -50,7 +50,7 @@ export const PUBLICATIONS = [
     }`
   },
   {
-    authors: "Manyu Wang, Chaoqun Huang, Mingjie Cai",
+    authors: "Manyu Wang, Chaoqun Huang, Mingjie Cai*",
     title: "GDSMVC: Gated disentanglement with structural and semantic constraints for deep multiview clustering",
     venue: "IEEE Transactions on Neural Networks and Learning Systems",
     year: "2026",
@@ -69,7 +69,7 @@ export const PUBLICATIONS = [
     }`
   },
   {
-    authors: "Jiaxin Zhan, Mingjie Cai, Chaoqun Huang",
+    authors: "Jiaxin Zhan, Mingjie Cai*, Chaoqun Huang",
     title: "Reinforcement learning integrated with K-means clustering for consensus optimization with fuzzy preference relations",
     venue: "IEEE Transactions on Fuzzy Systems",
     year: "2026",
