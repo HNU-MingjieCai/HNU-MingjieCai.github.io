@@ -112,7 +112,7 @@ Error generating stack: `+i.message+`
       pages={124102},
       year={2027},
       publisher={Elsevier}
-    }`},{authors:"Manyu Wang, Chaoqun Huang, Mingjie Cai",title:"GDSMVC: Gated disentanglement with structural and semantic constraints for deep multiview clustering",venue:"IEEE Transactions on Neural Networks and Learning Systems",year:"2026",onlineDate:"2026-10-21",doi:"10.1109/TNNLS.2026.3742896",opensource:!1,pages:"1-12",bib:`@article{wang2026gdsmvc,
+    }`},{authors:"Manyu Wang, Chaoqun Huang, Mingjie Cai*",title:"GDSMVC: Gated disentanglement with structural and semantic constraints for deep multiview clustering",venue:"IEEE Transactions on Neural Networks and Learning Systems",year:"2026",onlineDate:"2026-10-21",doi:"10.1109/TNNLS.2026.3742896",opensource:!1,pages:"1-12",bib:`@article{wang2026gdsmvc,
       title={GDSMVC: Gated Disentanglement With Structural and Semantic Constraints for Deep Multiview Clustering},
       author={Wang, Manyu and Huang, Chaoqun and Cai, Mingjie},
       journal={IEEE Transactions on Neural Networks and Learning Systems},
@@ -120,7 +120,7 @@ Error generating stack: `+i.message+`
       year={2026},
       publisher={IEEE},
       doi={10.1109/TNNLS.2026.3742896}
-    }`},{authors:"Jiaxin Zhan, Mingjie Cai, Chaoqun Huang",title:"Reinforcement learning integrated with K-means clustering for consensus optimization with fuzzy preference relations",venue:"IEEE Transactions on Fuzzy Systems",year:"2026",onlineDate:"2026-09-16",doi:"10.1109/TFUZZ.2026.3734595",opensource:!1,pages:"1-14",bib:`@article{zhan2026reinforcement,
+    }`},{authors:"Jiaxin Zhan, Mingjie Cai*, Chaoqun Huang",title:"Reinforcement learning integrated with K-means clustering for consensus optimization with fuzzy preference relations",venue:"IEEE Transactions on Fuzzy Systems",year:"2026",onlineDate:"2026-09-16",doi:"10.1109/TFUZZ.2026.3734595",opensource:!1,pages:"1-14",bib:`@article{zhan2026reinforcement,
       title={Reinforcement learning integrated with {K}-means clustering for consensus optimization with fuzzy preference relations},
       author={Zhan, Jiaxin and Cai, Mingjie and Huang, Chaoqun},
       journal={IEEE Transactions on Fuzzy Systems},
