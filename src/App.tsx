@@ -51,7 +51,7 @@ export const PUBLICATIONS = [
   },
   {
     authors: "Manyu Wang, Chaoqun Huang, Mingjie Cai",
-    title: "GDSMVC: Gated Disentanglement With Structural and Semantic Constraints for Deep Multiview Clustering",
+    title: "GDSMVC: Gated disentanglement with structural and semantic constraints for deep multiview clustering",
     venue: "IEEE Transactions on Neural Networks and Learning Systems",
     year: "2026",
     onlineDate: "2026-10-21",
@@ -1054,7 +1054,7 @@ export default function App() {
                   aria-label="Search publications"
                   autoComplete="off"
                   spellCheck={false}
-                  placeholder="Search publications..."
+                  placeholder="Title / Author / Journal"
                   value={publicationQuery}
                   onChange={event => setPublicationQuery(event.target.value)}
                   className="h-9 w-full appearance-none rounded-full border border-slate-200 bg-white pl-9 pr-9 text-sm text-slate-800 shadow-sm outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 [&::-webkit-search-cancel-button]:appearance-none"
