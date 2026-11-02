@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
-import { Mail, Github, ExternalLink, ChevronRight, Menu, X } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Mail, Github, ExternalLink, ChevronRight, Menu, Search, X } from 'lucide-react';
 import { motion } from 'motion/react';
 
 // Mock data for the homepage
@@ -47,6 +47,44 @@ export const PUBLICATIONS = [
       pages={124102},
       year={2027},
       publisher={Elsevier}
+    }`
+  },
+  {
+    authors: "Manyu Wang, Chaoqun Huang, Mingjie Cai",
+    title: "GDSMVC: Gated Disentanglement With Structural and Semantic Constraints for Deep Multiview Clustering",
+    venue: "IEEE Transactions on Neural Networks and Learning Systems",
+    year: "2026",
+    onlineDate: "2026-10-21",
+    doi: "10.1109/TNNLS.2026.3742896",
+    opensource: false,
+    pages: "1-12",
+    bib: `@article{wang2026gdsmvc,
+      title={GDSMVC: Gated Disentanglement With Structural and Semantic Constraints for Deep Multiview Clustering},
+      author={Wang, Manyu and Huang, Chaoqun and Cai, Mingjie},
+      journal={IEEE Transactions on Neural Networks and Learning Systems},
+      pages={1--12},
+      year={2026},
+      publisher={IEEE},
+      doi={10.1109/TNNLS.2026.3742896}
+    }`
+  },
+  {
+    authors: "Jiaxin Zhan, Mingjie Cai, Chaoqun Huang",
+    title: "Reinforcement learning integrated with K-means clustering for consensus optimization with fuzzy preference relations",
+    venue: "IEEE Transactions on Fuzzy Systems",
+    year: "2026",
+    onlineDate: "2026-09-16",
+    doi: "10.1109/TFUZZ.2026.3734595",
+    opensource: false,
+    pages: "1-14",
+    bib: `@article{zhan2026reinforcement,
+      title={Reinforcement learning integrated with {K}-means clustering for consensus optimization with fuzzy preference relations},
+      author={Zhan, Jiaxin and Cai, Mingjie and Huang, Chaoqun},
+      journal={IEEE Transactions on Fuzzy Systems},
+      pages={1--14},
+      year={2026},
+      publisher={IEEE},
+      doi={10.1109/TFUZZ.2026.3734595}
     }`
   },
   {
@@ -877,6 +915,23 @@ export const PUBLICATIONS = [
   
 ];
 
+type Publication = (typeof PUBLICATIONS)[number];
+
+export const filterPublications = (
+  publications: ReadonlyArray<Publication>,
+  query: string,
+): ReadonlyArray<Publication> => {
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+
+  if (!normalizedQuery) return publications;
+
+  return publications.filter(publication =>
+    [publication.title, publication.authors, publication.venue].some(value =>
+      value.toLocaleLowerCase().includes(normalizedQuery),
+    ),
+  );
+};
+
 type PublicationBibSource = {
   authors: string;
   bib?: string;
@@ -933,6 +988,8 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [avatarClicks, setAvatarClicks] = useState(0);
   const [showVisitorPopup, setShowVisitorPopup] = useState(false);
+  const [publicationQuery, setPublicationQuery] = useState('');
+  const publicationSearchRef = useRef<HTMLInputElement>(null);
 
   const handleAvatarClick = () => {
     const next = avatarClicks + 1;
@@ -951,10 +1008,16 @@ export default function App() {
     });
   };
 
+  const clearPublicationSearch = () => {
+    setPublicationQuery('');
+    publicationSearchRef.current?.focus();
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case 'Publications':
-        const sortedPubs = [...PUBLICATIONS].sort((a, b) => {
+        const filteredPubs = filterPublications(PUBLICATIONS, publicationQuery);
+        const sortedPubs = [...filteredPubs].sort((a, b) => {
           const yearDifference = parseInt(b.year) - parseInt(a.year);
 
           return yearDifference || b.onlineDate.localeCompare(a.onlineDate);
@@ -964,7 +1027,7 @@ export default function App() {
         return (
           <div className="space-y-8">
             {/* Year Navigation */}
-            <div className="flex flex-wrap gap-2 sticky top-[65px] bg-white/95 backdrop-blur-md py-4 z-10 border-b border-slate-100 -mx-4 px-4 sm:-mx-8 sm:px-8 shadow-sm sm:shadow-none">
+            <div className="flex flex-wrap gap-2 sticky top-[65px] bg-white/95 backdrop-blur-md py-4 z-10 border-b border-slate-100 -mx-4 px-4 shadow-sm sm:shadow-none">
               <span className="text-sm font-bold text-slate-400 mr-2 self-center">Jump to:</span>
               {years.map(year => (
                 <button
@@ -980,17 +1043,45 @@ export default function App() {
                   {year}
                 </button>
               ))}
+              <div className="relative w-full sm:ml-auto sm:w-64" data-publication-search="true">
+                <Search
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+                />
+                <input
+                  ref={publicationSearchRef}
+                  type="search"
+                  aria-label="Search publications"
+                  autoComplete="off"
+                  spellCheck={false}
+                  placeholder="Search publications..."
+                  value={publicationQuery}
+                  onChange={event => setPublicationQuery(event.target.value)}
+                  className="h-9 w-full appearance-none rounded-full border border-slate-200 bg-white pl-9 pr-9 text-sm text-slate-800 shadow-sm outline-none transition-all placeholder:text-slate-400 hover:border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 [&::-webkit-search-cancel-button]:appearance-none"
+                />
+                {publicationQuery && (
+                  <button
+                    type="button"
+                    aria-label="Clear publication search"
+                    onClick={clearPublicationSearch}
+                    className="absolute right-2 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  >
+                    <X aria-hidden="true" className="h-3.5 w-3.5" />
+                  </button>
+                )}
+              </div>
             </div>
 
-            <div className="space-y-10">
-              {years.map(year => (
-                <div key={year} id={`year-${year}`} className="scroll-mt-32">
-                  <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <span className="w-1 h-5 bg-blue-600 rounded-full"></span>
-                    {year}
-                  </h3>
-                  <div className="space-y-3">
-                    {sortedPubs.filter(p => p.year === year).map((pub, i) => (
+            {years.length > 0 ? (
+              <div className="space-y-10">
+                {years.map(year => (
+                  <div key={year} id={`year-${year}`} className="scroll-mt-32">
+                    <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                      <span className="w-1 h-5 bg-blue-600 rounded-full"></span>
+                      {year}
+                    </h3>
+                    <div className="space-y-3">
+                      {sortedPubs.filter(p => p.year === year).map((pub, i) => (
                       <article
                         key={pub.doi || `${pub.year}-${i}`}
                         data-publication-doi={pub.doi}
@@ -1051,11 +1142,25 @@ export default function App() {
                           </time>
                         </div>
                       </article>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <div role="status" className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-6 py-14 text-center">
+                <Search aria-hidden="true" className="mx-auto mb-3 h-6 w-6 text-slate-300" />
+                <p className="text-sm font-semibold text-slate-700">No publications found</p>
+                <p className="mt-1 text-xs text-slate-500">Try a paper title, author, or journal name.</p>
+                <button
+                  type="button"
+                  onClick={clearPublicationSearch}
+                  className="mt-4 text-xs font-semibold text-blue-600 hover:text-blue-700 hover:underline"
+                >
+                  Clear search
+                </button>
+              </div>
+            )}
           </div>
         );
       case 'Group Members':
