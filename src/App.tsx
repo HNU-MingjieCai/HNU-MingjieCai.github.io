@@ -917,6 +917,48 @@ export const PUBLICATIONS = [
 
 type Publication = (typeof PUBLICATIONS)[number];
 
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+export const highlightPublicationText = (
+  text: string,
+  query: string,
+): React.ReactNode => {
+  const searchTerm = query.trim();
+
+  if (!searchTerm) return text;
+
+  const matches = Array.from(
+    text.matchAll(new RegExp(escapeRegExp(searchTerm), 'gi')),
+  );
+
+  if (matches.length === 0) return text;
+
+  const highlightedText: React.ReactNode[] = [];
+  let cursor = 0;
+
+  matches.forEach((match, index) => {
+    const start = match.index ?? 0;
+    const end = start + match[0].length;
+
+    if (start > cursor) highlightedText.push(text.slice(cursor, start));
+    highlightedText.push(
+      <mark
+        key={`${start}-${index}`}
+        data-search-highlight="true"
+        className="rounded-sm bg-amber-200/80 px-0.5 text-inherit"
+      >
+        {text.slice(start, end)}
+      </mark>,
+    );
+    cursor = end;
+  });
+
+  if (cursor < text.length) highlightedText.push(text.slice(cursor));
+
+  return highlightedText;
+};
+
 export const filterPublications = (
   publications: ReadonlyArray<Publication>,
   query: string,
@@ -1089,9 +1131,9 @@ export default function App() {
                       >
                         <span className="text-slate-400 font-mono text-xs w-5 flex-shrink-0 pt-1">{i + 1}.</span>
                         <div className="flex-1 text-[14px] leading-relaxed text-slate-800 text-justify">
-                          <span className="font-bold">{pub.authors}. </span>
-                          <span>{pub.title}, </span>
-                          <span className="text-emerald-700 font-semibold">{pub.venue}</span>
+                          <span className="font-bold">{highlightPublicationText(pub.authors, publicationQuery)}. </span>
+                          <span>{highlightPublicationText(pub.title, publicationQuery)}, </span>
+                          <span className="text-emerald-700 font-semibold">{highlightPublicationText(pub.venue, publicationQuery)}</span>
                           <span>, {pub.volume && `${pub.volume} `}({pub.year}){pub.pages && ` ${pub.pages}`}. </span>
                           <a href={pub.doi ? `https://doi.org/${pub.doi}` : ((pub as any).pdfLink || "#")} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium ml-1">[DOI]</a>
                           <button 
